@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
 
     const mountain = $("#mountain")
 
@@ -7,8 +7,9 @@ $(document).ready(() => {
         let brightness = 100 - 100 * scrollTop / window.innerHeight;
 
         mountain.css({
-            top: -Math.floor(scrollTop * 0.5),
+            top: Math.min(-Math.floor(scrollTop * 0.5), 0),
             filter: `brightness(${brightness}%)`
         });
     });
+
 });
