@@ -28,7 +28,7 @@
 
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-      if (scrollTop > 100) {
+      if (scrollTop > window.innerHeight * 0.1) {
         mainNav.classList.add("navbar-shrink");
         mainNav.classList.add("border-gradient");
       } else {
