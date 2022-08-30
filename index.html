@@ -7,6 +7,7 @@
     <title>Caleb Tham</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/light-mode.css">
     <link rel="stylesheet" href="assets/css/Cabin.css">
     <link rel="stylesheet" href="assets/css/Lora.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -27,8 +28,8 @@
     </nav>
 
     <header class="cover">
-        <div id="sky"></div>
-        <div id="mountain"></div>
+        <div class="img" id="sky"></div>
+        <div class="img" id="mountain"></div>
         <div class="container h-screen d-flex align-items-center justify-content-center">
             <div class="row w-100">
                 <div class="col-lg-8 m-auto text-center">
@@ -36,6 +37,7 @@
                     <p class="intro-text">
                         Expressing creativity through code.
                     </p>
+                    <button id="lightSwitch" class="btn btn-link btn-circle"></button> <br>
                     <a class="btn btn-link btn-circle" role="button" href="#about">
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
@@ -53,10 +55,10 @@
                 <div class="row col-lg-8 mx-auto">
                     <div class="col-md-4 pb-3">
                         <img src="./assets/img/me.jpg" class="img-fluid rounded border-gradient" alt="Caleb Tham">
-                        <button class="btn btn-primary btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button" onclick="window.open('https://www.linkedin.com/in/calebtham/')">
+                        <button class="btn btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button" onclick="window.open('https://www.linkedin.com/in/calebtham/')">
                             <i class="fa fa-linkedin fa-fw"></i>
                         </button>
-                        <button class="btn btn-primary btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button" onclick="window.open('https://github.com/calebtham/')">
+                        <button class="btn btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button" onclick="window.open('https://github.com/calebtham/')">
                             <i class="fa fa-github fa-fw"></i>
                         </button>
                     </div>
@@ -117,6 +119,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/light-mode-switch.js"></script>
 </body>
 
 </html>

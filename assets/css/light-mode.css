@@ -1,0 +1,62 @@
+[data-theme="light"] {
+    background-color: white !important;
+    color: black !important;
+}
+
+[data-theme="light"] #mainNav.navbar-shrink,
+[data-theme="light"] .content-section {
+    background-color: white !important;
+}
+
+[data-theme="light"] #mainNav a {
+    color: black !important;
+}
+
+[data-theme="light"] #mainNav .nav-link.active {
+    background-color: rgb(0,0,0,0.1);
+}
+
+[data-theme="light"] .btn-circle {
+    color: black !important;
+    border-color: black !important;
+}
+
+[data-theme="light"] .btn-default {
+    color: rgba(69,97,210,1) !important;
+}
+
+[data-theme="light"] .btn-primary {
+    color: white !important;
+}
+
+[data-theme="light"] div.separator {
+    background: linear-gradient(90deg, #f57f48 0%, #f57f48 5%, #eee 5%, #eee 95%, #dd5bb0 95%, #dd5bb0 100%) !important;
+}
+
+[data-theme="light"] .border-gradient {
+    border-image-source: linear-gradient(90deg, #f57f48 0%, #dd5bb0 100%) !important;
+}
+
+header.cover .img  {
+    height: 100vh;
+}
+
+[data-theme="light"] header.cover #sky {
+    background-image: url('../img/sunset-sun.jpg'); 
+    background-position: center;
+    height: 100vh;
+}
+
+[data-theme="light"] header.cover #mountain {
+    background-image: none; 
+}
+
+@media only screen and (max-width: 991px) {
+    [data-theme="light"] #mainNav {
+        background-color: white !important;
+    }
+    [data-theme="light"] #mainNav .navbar-toggler {
+        color: black !important;
+        border-color: black !important;
+    }
+}

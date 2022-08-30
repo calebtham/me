@@ -1,22 +1,24 @@
+body {
+    transition: color 0.3s;
+}
+
 .border-gradient {
     border-bottom: solid 10px !important;
     border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, rgba(69,97,210,1) 0%, rgba(187,91,157,1) 100%);
+    border-image-source: linear-gradient(90deg, #4561d2 0%, #bb5b9d 100%);
 }
 
 div.separator {
     width: 100%;
     height: 5vw;
     margin-left: 0px;
-    color: black;
-    background: linear-gradient(90deg, rgba(69,97,210,1) 0%, rgba(69,97,210,1) 5%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(187,91,157,1) 95%, rgba(187,91,157,1) 100%);
+    background: linear-gradient(90deg, #4561d2 0%, #4561d2 5%, #111 5%, #111 95%, #bb5b9d 95%, #bb5b9d 100%);
     z-index: 1000;
 }
 
 .navbar-brand {
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
 
 .navbar .navbar-brand {
     opacity: 0%;
@@ -26,21 +28,17 @@ div.separator {
     opacity: 100%;
 }
 
-header.cover {
-    /* background-image: url('../img/grindelwaldsquare.jpg'); 
-    background-position: bottom;
-    background-size: cover;
-    height: max(140vh,90vw); */
-}
-
-header.cover #sky {
-    background-image: url('../img/grindelwaldsky.png'); 
-    background-position: bottom;
-    background-size: cover;
-    height: max(140vh,90vw);
+header.cover .img  {
     width: 100vw;
     position: fixed;
     z-index: -1;
+}
+
+header.cover #sky {
+    background-image: url('../img/grindelwaldsky.png');
+    background-position: bottom;
+    background-size: cover; 
+    height: max(140vh,90vw);
 }
 
 header.cover #mountain {
@@ -48,9 +46,6 @@ header.cover #mountain {
     background-position: bottom;
     background-size: cover;
     height: max(140vh,90vw);
-    width: 100vw;
-    position: fixed;
-    z-index: -1;
 }
 
 .h-screen {

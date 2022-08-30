@@ -1,4 +1,4 @@
-$(() => {
+window.addEventListener("load", () => {
     const mountain = document.getElementById("mountain");
     
     document.addEventListener("scroll", parallaxScroll);
