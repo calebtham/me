@@ -2,7 +2,6 @@
   "use strict"; // Start of use strict
 
   var mainNav = document.querySelector('#mainNav');
-  var navLogo = document.querySelector('#navLogo');
 
   if (mainNav) {
 

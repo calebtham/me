@@ -16,10 +16,35 @@ div.separator {
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+
 .navbar .navbar-brand {
     opacity: 0%;
 }
 
 .navbar.navbar-shrink .navbar-brand {
     opacity: 100%;
+}
+
+header.cover {
+    background-image: url('../img/grindelwaldsquare.jpg'); 
+    background-position: bottom;
+    background-size: cover;
+    height: max(140vh,90vw);
+}
+
+header.cover > .container {
+    height: 100vh;
+}
+
+
+.brand-heading {
+    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: max(6vw, 30pt);
+    
+}
+
+#star {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

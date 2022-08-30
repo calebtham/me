@@ -25,39 +25,44 @@
             </div>
         </div>
     </nav>
-    <header class="masthead">
-        <div class="intro-body" style="background-image:url('assets/img/grindelwald.png');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">Caleb Tham</h1>
-                        <p class="intro-text">
-                            Express creativity through code.
-                        </p>
-                        <a class="btn btn-link btn-circle" role="button" href="#about">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
+
+    <header class="cover">
+        <div class="container d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <div class="col-lg-8 m-auto text-center">
+                    <h1 class="brand-heading">Caleb Tham</h1>
+                    <p class="intro-text">
+                        Express creativity through code.
+                    </p>
+                    <a class="btn btn-link btn-circle" role="button" href="#about">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
                 </div>
             </div>
         </div>
+        <canvas id="star"></canvas>
     </header>
+
     <section class="text-start content-section" id="about">
         <div class="container">
             <div class="row">
                 <div class="row col-lg-8 mx-auto">
-                    <div class="col-4">
+                    <div class="col-md-4 pb-3">
                         <img src="./assets/img/me.jpg" class="img-fluid rounded border-gradient" alt="Caleb Tham">
-                        <button class="btn btn-primary btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button"><i class="fa fa-linkedin fa-fw"></i></button>
-                        <button class="btn btn-primary btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button"><i class="fa fa-github fa-fw"></i></button>
+                        <button class="btn btn-primary btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button" onclick="window.open('https://www.linkedin.com/in/calebtham/')">
+                            <i class="fa fa-linkedin fa-fw"></i>
+                        </button>
+                        <button class="btn btn-primary btn-lg btn-default w-auto mt-3 mr-3 rounded-pill" type="button" onclick="window.open('https://github.com/calebtham/')">
+                            <i class="fa fa-github fa-fw"></i>
+                        </button>
                     </div>
-                    <div class="col-8">
+                    <div class="col-md-8">
                         <h1 class="pb-2 border-gradient">About me</h1>
                         <p>I am currently a University of Warwick student studying Computer Science MEng. 
                         <p>I have always been captivated by the pervasiveness of technology. Reading of the field's exiting applications at an early age spurred me to pursue a career in Software Engineering. As I started to learn how to program, I immediately fell in love with the mix of problem-solving and creative thinking. Areas I'm particularly passionate about are machine learning and full stack development. I now find myself coding for my studies, for business, and for fun!</p>
                         <p id="cv">In my spare time, I enjoy continuing to express my creative side through composing music, photography, and graphic design - even still I find myself glued to a screen, using software such as Logic Pro and Adobe's Creative Suite. I love sharing my passions, and so I became Head of Marketing at Warwick Jazz Society.</p>
-                        <h2 class="pb-2 border-gradient w-50">Curriculum Vitae</h2>
-                        <p>Have a read through my <a href="">CV</a></p>
+                        <h2 class="pb-2 border-gradient w-md-50">Curriculum Vitae</h2>
+                        <p>Have a read through my <a href="./cv.pdf">CV</a>.</p>
                     </div>
                 </div>
             </div>
@@ -70,7 +75,8 @@
         <div class="container">
             <div class="col-lg-8 mx-auto">
                 <h1 class="pb-2 border-gradient">Projects</h1>
-                <p>You can projects Grayscale for free on the preview page.</p><button class="btn btn-primary btn-lg px-3 rounded-pill" type="button">visit projects page</button>
+                <p>Follow my journey through programming with some of the projects I have completed.</p>
+                <button class="btn btn-primary btn-lg px-3 rounded-pill" type="button">visit projects page</button>
             </div>
         </div>
     </section>
@@ -86,19 +92,27 @@
                     <p><a href="mailto:calebtham02@gmail.com">calebtham02@gmail.com</a><br>
                         +44 7975 706885
                     </p>
-                    <button class="btn btn-primary btn-lg w-auto mx-1 rounded-pill" type="button"><i class="fa fa-linkedin fa-fw"></i></button>
-                    <button class="btn btn-primary btn-lg w-auto mx-1 rounded-pill" type="button"><i class="fa fa-github fa-fw"></i></button>
+                    <button class="btn btn-primary btn-lg w-auto mx-1 rounded-pill" type="button" onclick="window.open('https://www.linkedin.com/in/calebtham/')">
+                        <i class="fa fa-linkedin fa-fw"></i>
+                    </button>
+                    <button class="btn btn-primary btn-lg w-auto mx-1 rounded-pill" type="button" onclick="window.open('https://github.com/calebtham/')">
+                        <i class="fa fa-github fa-fw"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container text-center">
             <p>By Caleb Tham</p>
         </div>
     </footer>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/star.js"></script>
 </body>
 
 </html>
