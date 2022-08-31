@@ -24,11 +24,11 @@ div.separator {
     opacity: 100%;
 }
 
-header.cover #grindelwaldSky,
-header.cover #grindelwaldMountain,
-header.cover #sunsetSun,
-header.cover #sunsetWater,
-header.cover #sunsetBoat {
+#grindelwaldSky,
+#grindelwaldMountain,
+#sunsetSun,
+#sunsetWater,
+#sunsetBoat {
     width: 100vw;
     position: fixed;
     z-index: -1;
@@ -38,30 +38,30 @@ header.cover #sunsetBoat {
     transition: opacity 0.2s ease-in-out;
 }
 
-header.cover #sunsetSun,
-header.cover #sunsetWater,
-header.cover #sunsetBoat {
+#sunsetSun,
+#sunsetWater,
+#sunsetBoat {
     opacity: 0%;
-    background-position: left;
+    background-position: bottom left;
 }
 
-header.cover #sunsetSun {
+#sunsetSun {
     background-image: url('../img/sunset-sun.jpg');
 }
 
-header.cover #sunsetWater {
+#sunsetWater {
     background-image: url('../img/sunset-water.png');
 }
 
-header.cover #sunsetBoat {
+#sunsetBoat {
     background-image: url('../img/sunset-boat.png');
 }
 
-header.cover #grindelwaldSky {
+#grindelwaldSky {
     background-image: url('../img/grindelwald-sky.jpg');
 }
 
-header.cover #grindelwaldMountain {
+#grindelwaldMountain {
     background-image: url('../img/grindelwald-mountain.png');
 }
 
