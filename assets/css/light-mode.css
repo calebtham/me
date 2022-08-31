@@ -40,6 +40,10 @@ div.separator,
     color: rgba(69,97,210,1) !important;
 }
 
+[data-theme="light"] .btn-default:hover {
+    color: white !important;
+}
+
 [data-theme="light"] .btn-primary {
     color: white !important;
 }
