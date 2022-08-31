@@ -1,4 +1,4 @@
-var lightMode = true
+var lightMode = false
 
 var lightSwitch = document.getElementById("lightSwitch");
 lightSwitch.addEventListener("click", () => {

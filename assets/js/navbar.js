@@ -28,7 +28,7 @@
 
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-      if (scrollTop > window.innerHeight * 0.1) {
+      if (scrollTop > window.innerHeight * 0.1 || window.innerWidth < 992) {
         mainNav.classList.add("navbar-shrink");
         mainNav.classList.add("border-gradient");
       } else {
@@ -36,10 +36,13 @@
         mainNav.classList.remove("border-gradient");
       }
     };
+    
     // Collapse now if page is not at top
     collapseNavbar();
+    
     // Collapse the navbar when page is scrolled
     document.addEventListener("scroll", collapseNavbar);
+    window.addEventListener("resize", collapseNavbar);
   }
 
 })(); // End of use strict
