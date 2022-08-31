@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/light-mode.css">
-    <link rel="stylesheet" href="assets/css/Cabin.css">
-    <link rel="stylesheet" href="assets/css/Lora.css">
+    <link rel="stylesheet" href="assets/css/cabin.css">
+    <link rel="stylesheet" href="assets/css/lora.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 </head>
 
@@ -33,20 +33,27 @@
         <div id="sunsetBoat"></div>
         <div id="grindelwaldSky"></div>
         <div id="grindelwaldMountain"></div>
-        <div class="container h-screen d-flex align-items-center justify-content-center">
-            <div class="row w-100">
+
+        <div class="container ">
+            <div class="row w-100 h-screen d-flex align-items-center justify-content-center">
                 <div class="col-lg-8 m-auto text-center">
                     <h1 class="brand-heading">Caleb Tham</h1>
                     <p class="intro-text">
                         Expressing creativity through code.
                     </p>
-                    <button id="lightSwitch" class="btn btn-link btn-circle"></button> <br>
-                    <a class="btn btn-link btn-circle" role="button" href="#about">
-                        <i class="fa fa-angle-double-down animated"></i>
-                    </a>
+                    <button id="lightSwitch" class="btn btn-link btn-circle">
+                        <i class="fa fa-sun-o"></i>
+                    </button>
                 </div>
             </div>
+            <div class="row w-100 d-flex align-items-center justify-content-center">
+                <a id="arrow" class="w-auto py-0 btn btn-link rounded-pill" role="button" href="#about">
+                    <i class="fa fa-angle-down animated"></i>
+                </a>
+            </div>
+            
         </div>
+
         <canvas id="star"></canvas>
     </header>
 

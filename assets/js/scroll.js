@@ -2,6 +2,7 @@ window.addEventListener("load", () => {
     const mountain = document.getElementById("grindelwaldMountain");
     const water = document.getElementById("sunsetWater");
     const boat = document.getElementById("sunsetBoat");
+    const arrow = document.getElementById("arrow");
     
     document.addEventListener("scroll", parallaxScroll);
     lightSwitch.addEventListener("click", parallaxScroll);
@@ -21,7 +22,11 @@ window.addEventListener("load", () => {
             mountain.style.top = `${Math.min(-Math.floor(scrollTop * 0.5), 0)}px`;
             mountain.style.filter = `brightness(${brightness}%)`;
         }
-
         
+        if (scrollTop === 0) {
+            arrow.style.opacity = "100%";
+        } else {
+            arrow.style.opacity = "0%";
+        }
     }
 });

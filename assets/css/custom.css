@@ -34,7 +34,7 @@ header.cover #sunsetBoat {
     z-index: -1;
     background-position: bottom;
     background-size: cover; 
-    height: max(140vh,85vw);
+    height: max(140vh,90vw);
     transition: opacity 0.2s ease-in-out;
 }
 
@@ -42,6 +42,7 @@ header.cover #sunsetSun,
 header.cover #sunsetWater,
 header.cover #sunsetBoat {
     opacity: 0%;
+    background-position: left;
 }
 
 header.cover #sunsetSun {
@@ -57,11 +58,22 @@ header.cover #sunsetBoat {
 }
 
 header.cover #grindelwaldSky {
-    background-image: url('../img/grindelwald-sky.png');
+    background-image: url('../img/grindelwald-sky.jpg');
 }
 
 header.cover #grindelwaldMountain {
     background-image: url('../img/grindelwald-mountain.png');
+}
+
+#lightSwitch {
+    padding: 4px;
+    font-size: large;
+}
+
+#arrow {
+    margin-top: -100px;
+    color: white;
+    font-size: xx-large;
 }
 
 .h-screen {

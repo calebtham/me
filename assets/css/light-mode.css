@@ -1,8 +1,6 @@
 body,
 #mainNav a,
-#mainNav.navbar-shrink,
 #mainNav .navbar-toggler,
-#mainNav,
 .content-section,
 #mainNav .nav-link.active,
 div.separator,
@@ -24,7 +22,8 @@ div.separator,
     background-color: white !important;
 }
 
-[data-theme="light"] #mainNav a {
+[data-theme="light"] #mainNav a,
+[data-theme="light"] #arrow {
     color: black !important;
 }
 
