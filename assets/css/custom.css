@@ -92,3 +92,78 @@ div.separator {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+.top-spacer {
+    margin-top: 100px;
+}
+
+.badge {
+    font-size: small;
+    margin-right: 4px;
+}
+
+.card ::-webkit-scrollbar {
+    width: 13px;
+}
+
+.card ::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 7px;
+    -webkit-box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+}
+
+.card ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.card ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.card {
+    background-color: #171717;
+    color: white;
+    border-radius: 0px;
+    border: none;
+    padding: 20px;
+    padding-bottom: 10px;
+    width: auto;
+}
+
+.card .collapse {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.card a.more {
+    text-decoration: none;
+    color: white;
+    font-family:"Cabin","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.card a.more:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card .date {
+    font-style: italic;
+    font-size: small;
+    float: right;
+}
+
+.bg-primary {
+    background-color: #4561d2 !important;
+}
+
+.bg-secondary {
+    background-color: #bb5b9d !important;
+}
+
+.bg-grey {
+    background-color: rgba(255, 255, 255, 0.2);
+}
