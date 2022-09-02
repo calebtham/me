@@ -97,34 +97,6 @@ div.separator {
     margin-top: 100px;
 }
 
-.badge {
-    font-size: small;
-    margin-right: 4px;
-}
-
-.card ::-webkit-scrollbar {
-    width: 13px;
-}
-
-.card ::-webkit-scrollbar-thumb {
-    border: 4px solid rgba(0, 0, 0, 0);
-    background-clip: padding-box;
-    background-color: rgba(255, 255, 255, 0.2);
-    -webkit-border-radius: 7px;
-    -webkit-box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.05),
-    inset 1px 1px 0px rgba(255, 255, 255, 0.05);
-}
-
-.card ::-webkit-scrollbar-button {
-    display: none;
-    width: 0;
-    height: 0;
-}
-
-.card ::-webkit-scrollbar-corner {
-    background-color: transparent;
-}
-
 .card {
     background-color: #171717;
     color: white;
@@ -154,6 +126,34 @@ div.separator {
     font-style: italic;
     font-size: small;
     float: right;
+}
+
+.card ::-webkit-scrollbar {
+    width: 13px;
+}
+
+.card ::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 7px;
+    -webkit-box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+}
+
+.card ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.card ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.badge {
+    font-size: small;
+    margin-right: 4px;
 }
 
 .bg-primary {

@@ -67,6 +67,35 @@ div.separator,
     opacity: 0%;
 }
 
+[data-theme="light"] .card {
+    background-color: #eee;
+    color: black;
+}
+
+[data-theme="light"] .card a.more {
+    color: black
+}
+
+[data-theme="light"] .card a.more:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .bg-primary {
+    background-color: #f57f48 !important;
+}
+
+[data-theme="light"] .bg-secondary {
+    background-color: #dd5bb0 !important;
+}
+
+[data-theme="light"] .bg-grey {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .card ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 @media only screen and (max-width: 991px) {
     [data-theme="light"] #mainNav {
         background-color: white !important;
