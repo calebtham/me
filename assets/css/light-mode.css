@@ -72,12 +72,21 @@ div.separator,
     color: black;
 }
 
-[data-theme="light"] .card a.more {
+[data-theme="light"] .card .more {
     color: black
 }
 
 [data-theme="light"] .card a.more:hover {
     color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .card ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .card .btn-carousel .carousel-control-prev-icon,
+[data-theme="light"] .card .btn-carousel .carousel-control-next-icon {
+    filter: brightness(0);
 }
 
 [data-theme="light"] .bg-primary {
@@ -90,10 +99,6 @@ div.separator,
 
 [data-theme="light"] .bg-grey {
     background-color: rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="light"] .card ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 991px) {

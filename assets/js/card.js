@@ -6,3 +6,29 @@ $(".card a.more").click((e) => {
         $(e.currentTarget).html('<i class="fa fa-angle-down"></i>')
     }
 });
+
+$(".card .btn-carousel").click((e) => {
+    let btn = $(e.currentTarget)
+    let div = btn.parent().parent()
+    let total = div.find(".carousel-inner").children().length
+    let current = div.find(".active")
+    let increment;
+
+    if (btn.attr("data-bs-slide") === "next") {
+        increment = 1;
+        let next = (current.index() === total - 1) ? current.parent().children().first() : current.next()
+        next.addClass("active")
+    } else {
+        increment = -1;
+        let prev = (current.index() === 0) ? current.parent().children().last() : current.prev()
+        prev.addClass("active")
+    } 
+
+    current.removeClass("active")
+    div.find(".more").text(`${mod(current.index() + increment, total) + 1} / ${total}`)
+});
+
+// Returns positive integer (as in Mathematical definition for mod)
+function mod(n, m) {
+    return ((n % m) + m) % m;
+}

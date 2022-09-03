@@ -93,14 +93,14 @@
         <div class="container">
             <div class="col-lg-8 mx-auto">
                 <h1 class="pb-2 border-gradient">Personal Projects</h1>
-                <p>Follow my journey through programming with some of the projects I have completed myself.</p>                
+                <p>Follow my journey through programming with some of the individual projects I have completed.</p>                
             </div>
 
             <div class="col-lg-10 mx-auto row">
 
                 <div class="col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">AI</span>
                             <span class="badge bg-primary mb-2">Web Dev</span>
                             <span class="badge bg-primary mb-2">Multithreading</span>
@@ -112,31 +112,50 @@
                             <span class="badge bg-secondary mb-2">SQL</span>
                             <span class="badge bg-grey mb-2">JavaCC</span>
                         </h5>
-                        <h3 class="mb-1">Courswork Highlights (4)<span class="date mt-1">2020 - 2024</span></h3>
-                        <p class="mb-3">Individual coursework completed at the University of Warwick, including: a scheduling AI, a multithreaded packet sniffer, a chore scheduling web app, a parser and lexer (and interpreter).</p>
+                        <h3 class="mb-1">Coursework Highlights (4)<span class="date mt-1">2020 - 2024</span></h3>
+                        <p class="mb-3">Individual coursework completed at the University of Warwick, including: a chore scheduling app, an AI scheduler, a multithreaded packet sniffer, and a parser/lexer/interpreter.</p>
                         <!-- <img src="..." class="img-fluid" alt="..."> -->
                         <div class="collapse mt-3" id="warwick">
-                            <h5 class="mb-1">Enchore (a chore scheduling app)</h5>
-                            <p class="mb-3">With PHP, JavaScript, and SQL, I implemented a chore scheduling web app, complete with a database, user authentication system, and push notifications.</p>
-                            <p class="mb-3">Users may create, edit, delete their account. A user can create or join a house, for which chores can be organised and scheduled to repeat. Chores are assigned to a member of the house and can be marked as complete.</p>
-                            <p class="mb-3">This coursework enhanced my web development skills, allowing me to better consider the importance of security best practices, intuitive user interface design, and accessibility features.</p>
-                            <p>I was awarded a First (96%) for this coursework.</p>
-
-                            <h5 class="mb-1">AI Scheduler</h5>
-                            <p class="mb-3">I implemented, in Python, a program that takes as input a set of shows and comedians for a comedy club and outputs a minimum cost timetable, using AI techniques such as simulated annealing and backtracking.</p>
-                            <p class="mb-3">This coursework emphasised the importance of choosing the most appropriate AI techniques and data structures for a given task with it significantly impacting accuracy and performance.</p>
-                            <p>For this coursework, I received a First (94%).</p>
-                        
-                            <h5 class="mb-1">Multithreaded Packet Sniffer</h5>
-                            <p class="mb-3">Using C, I implemented a program that parses TCP/IP packets to detect malicious traffic. The program identifies SYN attacks, ARP poisoning attacks, and blacklisted URLs. The efficiency of the program was improved by making use of multithreaded programming (thread pool model) to process packets in parallel.</p>
-                            <p class="mb-3">By programming in C, I better understand how memory in programs is managed and how important it is to write code carefully as to avoid memory leaks. Moreover, implementing a thread pool demonstrated the necessity to properly synchronize threads, such as by using mutex locks.</p>
-                            <p>This coursework was graded as a First.</p>
-
-                            <h5 class="mb-1">Parser, Lexer, and Interpreter</h5>
-                            <p class="mb-3">In Java (JavaCC), I wrote a parser, lexer, and interpreter for a custom-defined programming langauge, which included arithmetic expressions and function calls.</p>
-                            <p class="mb-3">This coursework demonstrated to usefulness of regular expressions and helped me better appreciate the stages involved in compilation.</p>
-                            <p>I received a First (100%) for this coursework.</p>
-                            
+                            <div id="warwickCorousel">
+                                <div class="mx-auto mb-3 text-center">
+                                    <btn class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </btn>
+                                    <span class="more">1 / 4</span>
+                                    <btn class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </btn>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h5 class="mb-1">Enchore (a chore scheduling app)</h5>
+                                        <p class="mb-3">With PHP, JavaScript, and SQL, I implemented a chore scheduling web app, complete with a database, user authentication system, and push notifications.</p>
+                                        <p class="mb-3">Users may create, edit, delete their account. A user can create or join a house, for which chores can be organised and scheduled to repeat. Chores are assigned to a member of the house and can be marked as complete.</p>
+                                        <p class="mb-3">This coursework enhanced my web development skills, allowing me to better consider the importance of security best practices, intuitive user interface design, and accessibility features.</p>
+                                        <p>I was awarded a First (96%) for this coursework.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="mb-1">AI Scheduler</h5>
+                                        <p class="mb-3">I implemented, in Python, a program that takes as input a set of shows and comedians for a comedy club and outputs a minimum cost timetable, using AI techniques such as simulated annealing and backtracking.</p>
+                                        <p class="mb-3">This coursework emphasised the importance of choosing the most appropriate AI techniques and data structures for a given task with this significantly impacting accuracy and performance.</p>
+                                        <p>For this coursework, I received a First (94%).</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="mb-1">Multithreaded Packet Sniffer</h5>
+                                        <p class="mb-3">Using C, I implemented a program that parses TCP/IP packets to detect malicious traffic. The program identifies SYN attacks, ARP poisoning attacks, and blacklisted URLs. The efficiency of the program was improved by making use of multithreaded programming (thread pool model) to process packets in parallel.</p>
+                                        <p class="mb-3">Having programmed in C, I now better understand how memory in programs is managed and how important it is to write code carefully as to avoid memory leaks. Moreover, implementing a thread pool demonstrated the necessity to properly synchronize threads, such as by using mutex locks.</p>
+                                        <p>This coursework was graded as a First.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="mb-1">Parser, Lexer, and Interpreter</h5>
+                                        <p class="mb-3">In Java (JavaCC), I wrote a parser, lexer, and interpreter for a custom-defined programming langauge, which included arithmetic expressions and function calls.</p>
+                                        <p class="mb-3">This coursework demonstrated to usefulness of regular expressions and helped me better appreciate the stages involved in compilation.</p>
+                                        <p>I received a First (100%) for this coursework.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#warwick" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fa fa-angle-down"></i>
@@ -146,7 +165,7 @@
 
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">Web Dev</span>
                             <span class="badge bg-primary mb-2">OOP</span>
                             <span class="badge bg-secondary mb-2">HTML</span>
@@ -171,7 +190,7 @@
 
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">AI/ML</span>
                             <span class="badge bg-secondary mb-2">Python</span>
                             <span class="badge bg-grey mb-2">TensorFlow 2</span>
@@ -195,7 +214,7 @@
 
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">Web Dev</span>
                             <span class="badge bg-secondary mb-2">HTML</span>
                             <span class="badge bg-secondary mb-2">CSS</span>
@@ -207,7 +226,7 @@
                         <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
                         <div class="collapse mt-3" id="lockdownlearning">
                             <p>During the first COVID-19 lockdown, I co-founded a company to advertise online GCSE/A-Level tutors. Our goal was to advertise through leaflets sent to schools and with our website.</p>
-                            <p>Under some time pressure, I learned essential web technologies, including HTML, CSS, and JavaScript (Node.js) in under a week to develop the company website
+                            <p>Under some time pressure, I learned essential web technologies, including HTML, CSS, and JavaScript (Node.js) in under a week to develop the company website.
                             <p>We successfully found many students for tutors listed on our website.</p>
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#lockdownlearning" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -218,7 +237,7 @@
 
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">Physics</span>
                             <span class="badge bg-primary mb-2">OOP</span>
                             <span class="badge bg-primary mb-2">AI</span>
@@ -240,7 +259,7 @@
 
                 <div class="col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">Visualisation</span>
                             <span class="badge bg-primary mb-2">AI/ML</span>
                             <span class="badge bg-primary mb-2">Algorithms</span>
@@ -252,17 +271,37 @@
                         <p class="mb-3">Various projects including: TensorFlow.js visualisation, Shortest path finding visualisation, SIR infection model simulation</p>
                         <!-- <img src="..." class="img-fluid" alt="..."> -->
                         <div class="collapse mt-3" id="p5">
-                            <p>During A-Levels, I enjoyed creating small visualisations for various concepts that I learned from school or through my own research. To do this, I used the p5.js library, which made it easy to draw graphics on a HTML canvas.</p>
-                            <p>Here are 3 of my favourite projects:</p>
-                            
-                            <a href="./projects/p5/tensorflow" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">TensorFlow.js Visualisation</h5></a>
-                            <p>This project uses a TensorFlow.js neural network to learn XOR. While this is a trivial task for a NN, it allowed for the learning process to be visualised. Here, I enjoyed experimenting with different model architectures - especially with the optimizer.</p>
-                            
-                            <a href="./projects/p5/path-finding" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">Shorest Path Finding</h5></a>
-                            <p>After learning about Dijkstra's and A* algorithms for shortest path finding at A-Level, I decided to implement a visualisation tool for both.</p>
-                            
-                            <a href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">SIR Infection Modelling</h5></a>
-                            <p>During the COVID-19 pandemic, I read about the SIR model for spread of infection. Here, I created a collision model approximation to simulate infection spread and estimate the SIR model.</p>
+
+                            <p class="mb-3">During A-Levels, I enjoyed creating small visualisations for various concepts that I learned from school or through my own research. To do this, I used the p5.js library, which made it easy to draw graphics on a HTML canvas.</p>
+                            <p class="mb-0">Here are 3 of my favourite projects:</p>
+
+                            <div id="p5Corousel">
+                                <div class="mx-auto mb-3 text-center">
+                                    <btn class="btn btn-carousel" type="button" data-bs-target="#p5Corousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </btn>
+                                    <span class="more">1 / 3</span>
+                                    <btn class="btn btn-carousel" type="button" data-bs-target="#p5Corousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </btn>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="./projects/p5/tensorflow" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">TensorFlow.js Visualisation</h5></a>
+                                        <p>This project uses a TensorFlow.js neural network to learn XOR. While this is a trivial task for a NN, it allowed for the learning process to be visualised. Here, I enjoyed experimenting with different model architectures - especially with the optimizer.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="./projects/p5/path-finding" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">Shorest Path Finding</h5></a>
+                                        <p>After learning about Dijkstra's and A* algorithms for shortest path finding at A-Level, I decided to implement a visualisation tool for both.</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">SIR Infection Modelling</h5></a>
+                                        <p>During the COVID-19 pandemic, I read about the SIR model for spread of infection. Here, I created a collision model approximation to simulate infection spread and estimate the SIR model.</p>            
+                                    </div>
+                                </div>
+                            </div>    
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#p5" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fa fa-angle-down"></i>
@@ -272,7 +311,7 @@
 
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">AI/ML</span>
                             <span class="badge bg-primary mb-2">OOP</span>
                             <span class="badge bg-secondary mb-2">VB.NET</span>
@@ -295,7 +334,7 @@
 
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">AI</span>
                             <span class="badge bg-primary mb-2">OOP</span>
                             <span class="badge bg-secondary mb-2">VB.NET</span>
@@ -316,7 +355,7 @@
 
                 <!-- <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card">
-                        <h5 class="mb-3">
+                        <h5 class="mb-2">
                             <span class="badge bg-primary mb-2">Scratch</span>
                         </h5>
                         <h3 class="mb-1">Ultimate Standoff<span class="date mt-1">2015</span></h3>
