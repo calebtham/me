@@ -14,12 +14,11 @@ window.addEventListener("load", () => {
         let brightness = 100 - 100 * scrollTop / window.innerHeight;
        
         if (document.body.getAttribute("data-theme")) {
-            water.style.top = `${Math.min(-Math.floor(scrollTop * 0.5), 0)}px`;
+            water.style.transform = `translateY(${Math.min(-Math.floor(scrollTop * 0.5), 0)}px)`;
 
-            boat.style.top = `${Math.min(-Math.floor(scrollTop * 0.5), 0)}px`;
-            boat.style.left = `${Math.max(Math.floor(scrollTop * 0.25), 0)}px`;
+            boat.style.transform = `translate(${Math.max(Math.floor(scrollTop * 0.25), 0)}px, ${Math.min(-Math.floor(scrollTop * 0.5), 0)}px)`;
         } else {
-            mountain.style.top = `${Math.min(-Math.floor(scrollTop * 0.5), 0)}px`;
+            mountain.style.transform = `translateY(${Math.min(-Math.floor(scrollTop * 0.5), 0)}px)`;
             mountain.style.filter = `brightness(${brightness}%)`;
         }
         

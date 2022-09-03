@@ -25,10 +25,5 @@ $(".card .btn-carousel").click((e) => {
     } 
 
     current.removeClass("active")
-    div.find(".more").text(`${mod(current.index() + increment, total) + 1} / ${total}`)
+    div.find(".more").text(`${(current.index() + increment + total) % total + 1} / ${total}`)
 });
-
-// Returns positive integer (as in Mathematical definition for mod)
-function mod(n, m) {
-    return ((n % m) + m) % m;
-}
