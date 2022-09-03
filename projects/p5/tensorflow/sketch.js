@@ -1,8 +1,15 @@
+const tl = document.getElementById("tl")
+const tr = document.getElementById("tr")
+const bl = document.getElementById("bl")
+const br = document.getElementById("br")
+const loss = document.getElementById("loss")
+
 let model;
 let resolution = 20;
 let cols;
 let rows;
 let xs;
+let epoch = 0;
 
 const train_xs = tf.tensor2d([
     [0, 0],
@@ -63,7 +70,8 @@ function setup() {
 
 function train() {
     trainModel().then(result => {
-        console.log(result.history.loss[0]);
+        epoch++
+        loss.innerHTML = "Epoch: " + epoch + "<br>Loss: " + result.history.loss[0]
         setTimeout(train, 10);
     });
 }
@@ -73,14 +81,14 @@ function trainModel() {
         train_xs,
         train_ys,
         shuffle = true,
-        epochs = 10
+        epochs = 1
     );
 }
 
 function draw() {
     background(0);
 
-    tf.tidy(() => {
+    tf.tidy((e) => {
         // Get the predictions
         let ys = model.predict(xs);
         let y_values = ys.dataSync();
@@ -89,17 +97,23 @@ function draw() {
         let index = 0;
         for (let i = 0; i < cols; i++) {
             for (let j = 0; j < rows; j++) {
-                let br = y_values[index] * 255
-                fill(br);
+                let brightness = y_values[index] * 255
+                fill(brightness);
                 noStroke()
                 rect(i * resolution, j * resolution, resolution, resolution);
-                fill(255 - br);
+                fill(255 - brightness);
                 textSize(8);
                 textAlign(CENTER, CENTER);
                 text(nf(y_values[index], 1, 2), i * resolution + resolution / 2, j * resolution + resolution / 2)
                 index++;
             }
         }
+
+        // Get corners
+        tl.innerText = y_values[0]
+        tr.innerText = y_values[cols - 1]
+        bl.innerText = y_values[cols * rows - cols]
+        br.innerText = y_values[cols * rows - 1]
     });
 
 }

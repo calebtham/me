@@ -2,9 +2,13 @@ let Humans = []
 let Model = []
 let transmissionRate
 
+const R = document.getElementById("R")
+
 function setup() {
-  createCanvas(800, 600);
   transmissionRate = createSlider(0, 0.5, 0.2, 0.025)
+  transmissionRate.position(0, 140)
+  R.innerText = transmissionRate.value()
+  createCanvas(800, 600);
 
   Humans.push(new Human(600, 200, random(-3, 3), random(-3, 3), 5, 5))
   Humans.push(new Human(600, 201, random(-3, 3), random(-3, 3), 5, 5))
@@ -20,8 +24,8 @@ function setup() {
   }
 }
 
-function mouseReleased() {
-  console.log(transmissionRate.value())
+function mouseDragged() {
+  R.innerText = transmissionRate.value()
 }
 
 function draw() {
@@ -33,13 +37,6 @@ function draw() {
       b2 = Humans[j]
       if (Human.intersects(b1, b2)) {
         Human.resolveCollision(b1, b2)
-        //console.log("collide")
-        //var energy = 0
-        // for (var k = 0; k < Humans.length; k++) {
-        //   var b = Humans[k]
-        //   energy += 0.5 * b.mass * b.velocity.magnitude() * b.velocity.magnitude()
-        // }
-        // console.log(energy)
       }
     }
   }
@@ -82,8 +79,8 @@ function draw() {
 
   //graph
   strokeWeight(2)
-  fill(255, 150)
-  var w = 300
+  fill(255, 100)
+  var w = width
   var h = height
   rect(-1, -1, w + 1, h + 1)
   var step = w / Model.length

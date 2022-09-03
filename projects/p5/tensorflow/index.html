@@ -5,10 +5,19 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"> </script>
-  <script type="text/javascript" src="sketch.js"></script>
+  <title>TensorFlow XOR Classifier</title>
 </head>
 
 <body>
+  <p>XOR Classifier</p>
+  <p>Location: Prediction (Truth) <br>
+    Top left: <span id="tl"></span> (0) <br>
+    Top Right: <span id="tr"></span> (1) <br>
+    Bottom left: <span id="bl"></span> (1) <br>
+    Bottom right: <span id="br"></span> (0)<br>
+  </p>
+  <p id="loss">Epoch: <br>Loss: </p>
+  <script type="text/javascript" src="sketch.js"></script>
 </body>
 
 </html>

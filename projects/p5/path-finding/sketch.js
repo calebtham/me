@@ -7,6 +7,8 @@ function Square(x, y) {
   }
 }
 
+const label = document.getElementById("mode")
+
 const squareSize = 35;
 var astar = true
 var clickMode = "wall"
@@ -24,7 +26,7 @@ const maxScore = 100000
 const root2 = 1.41421356237
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(Math.min(windowWidth *  2/3, 1000), Math.min(windowHeight *  2/3, 1000))
   background(0)
   let rows = int(width / squareSize)
   let cols = int(height / squareSize)
@@ -135,7 +137,7 @@ function keyPressed() {
     }
   } else if (key == "a") {
     astar = !astar
-    console.log(astar ? "a*" : "dijkstra's")
+    label.innerText = astar ? "Mode: A* Search" : "Mode: Dijkstra's Algorithm"
   }
 }
 

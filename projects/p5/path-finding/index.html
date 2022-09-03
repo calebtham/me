@@ -2,14 +2,31 @@
 <html>
 
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
-
+    <title>Path Finding</title>
 </head>
 
 <body>
+  <p>
+    How to use: <br>
+    - Drag and drop the Source node (Green square) <br>
+    - Drag and drop the Destination node (Red square) <br>
+    - Drag across the grid to draw walls (Black squares) <br>
+    - Press ENTER to start the search, and ENTER again to reset the grid <br>
+    - Press 'a' to toggle between Dijkstra's and A* search<br>
+    - Press ESC to clear the grid
+  </p>
+  <p>
+    Key: <br>
+    Green = Source;
+    Red = Destination;
+    Black = Wall;
+    Light-Blue = Explored;
+    Dark-Blue = Frontier;
+  </p>
+  <p id="mode">Mode: A* Search</p>
   <script src="sketch.js"></script>
 </body>
 
