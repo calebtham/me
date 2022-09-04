@@ -36,7 +36,7 @@
         <div id="grindelwaldSky"></div>
         <div id="grindelwaldMountain"></div>
 
-        <div class="container ">
+        <div class="container">
             <div class="row w-100 m-auto h-screen d-flex align-items-center justify-content-center ">
                 <div class="col-lg-8 text-center">
                     <h1 class="brand-heading mb-3">Caleb Tham</h1>
@@ -59,10 +59,12 @@
         <canvas id="star"></canvas>
     </header>
 
+    <div class="separator"></div>
+
     <section class="text-start content-section" id="about">
         <div class="container">
             <div class="row">
-                <div class="row col-lg-8 mx-auto">
+                <div class="about-section row col-lg-8 mx-auto py-5 px-4">
                     <div class="col-md-4 pb-3">
                         <img src="./assets/img/me.png" class="col-6 col-md-12 img-fluid rounded border-gradient" alt="Caleb Tham">
                         <div>
@@ -93,7 +95,7 @@
         <div class="container">
             <div class="col-lg-8 mx-auto">
                 <h1 class="pb-2 border-gradient">Personal Projects</h1>
-                <p>Follow my journey through programming with some of the individual projects I have completed.</p>                
+                <p>Follow my journey through programming with some of my favourite individual projects I have completed.</p>                
             </div>
 
             <div class="col-lg-10 mx-auto row">
@@ -130,16 +132,35 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <h5 class="mb-1">Enchore (a chore scheduling app)</h5>
-                                        <p class="mb-3">With PHP, JavaScript, and SQL, I implemented a chore scheduling web app, complete with a database, user authentication system, and push notifications.</p>
-                                        <p class="mb-3">Users may create, edit, delete their account. A user can create or join a house, for which chores can be organised and scheduled to repeat. Chores are assigned to a member of the house and can be marked as complete.</p>
-                                        <p class="mb-3">This coursework enhanced my web development skills, allowing me to better consider the importance of security best practices, intuitive user interface design, and accessibility features.</p>
-                                        <p>I was awarded a First (96%) for this coursework.</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="mb-1">Enchore (a chore scheduling app)</h5>
+                                                <!-- <img src="./projects/coursework/enchore/logo.png" class="img-fluid img-thumbnail my-3" alt="logo"> -->
+                                                <p class="mb-3">With PHP, JavaScript, and SQL, I implemented a chore scheduling web app, complete with a database, user authentication system, and push notifications.</p>
+                                                <p class="mb-3">Users may create, edit, delete their account. A user can create or join a house, for which chores can be organised and scheduled to repeat. Chores are assigned to a member of the house and can be edited and marked as complete. There is also a house leaderboard that ranks house members according to different factors (such as chore completion rate).</p>
+                                                <div class="row">
+                                                    <div class="col-lg-5 mb-3">
+                                                        <img src="./projects/coursework/enchore/dashboard-incomplete.png" class="img-fluid img-thumbnail" alt="edit a chore">
+                                                    </div>
+                                                    <div class="col-lg-5 mb-3">
+                                                        <img src="./projects/coursework/enchore/dashboard-complete.png" class="img-fluid img-thumbnail" alt="account settings">
+                                                    </div>
+                                                    <div class="col-lg-4 col-10 mb-3">
+                                                        <img src="./projects/coursework/enchore/chore.png" class="img-fluid img-thumbnail" alt="edit a chore">
+                                                    </div>
+                                                    <div class="col-lg-4 col-10 mb-3">
+                                                        <img src="./projects/coursework/enchore/account.png" class="img-fluid img-thumbnail" alt="account settings">
+                                                    </div>
+                                                </div>
+                                                <p class="mb-3">This coursework enhanced my web development skills, allowing me to better consider the significance of security best practices, intuitive user interface design, and accessibility features. It also demonstrated the usefulness of AJAX to create dynamic pages and improve the user experience.</p>
+                                                <p>I was awarded a First (96%) for this coursework.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
                                         <h5 class="mb-1">AI Scheduler</h5>
-                                        <p class="mb-3">I implemented, in Python, a program that takes as input a set of shows and comedians for a comedy club and outputs a minimum cost timetable, using AI techniques such as simulated annealing and backtracking.</p>
-                                        <p class="mb-3">This coursework emphasised the importance of choosing the most appropriate AI techniques and data structures for a given task with this significantly impacting accuracy and performance.</p>
+                                        <p class="mb-3">I implemented, in Python, a program that takes as input a set of shows and comedians for a comedy club and outputs a legal minimum cost timetable according to some soft and hard constraints. AI techniques such as simulated annealing and backtracking were used.</p>
+                                        <p class="mb-3">This coursework emphasised the importance of choosing the most appropriate AI techniques and data structures for a given task with this significantly impacting accuracy and performance (both in terms of speed and memory).</p>
                                         <p>For this coursework, I received a First (94%).</p>
                                     </div>
                                     <div class="carousel-item">
@@ -177,10 +198,16 @@
                         </h5>
                         <h3 class="mb-1">Multchess<span class="date mt-1">2021</span></h3>
                         <p class="mb-3">Online multiplayer chess web application made with Node.js and Socket.IO. Website: <a href="https://www.multchess.com/" target="_blank" rel="noopener noreferrer">multchess.com</a></p>
-                        <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
+                        <div class="inline mx-auto">
+                            <a href="https://www.multchess.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="./projects/multchess/menu.png" class="img-fluid img-thumbnail col-5 d-lg-none" alt="multchess">
+                            <img src="./projects/multchess/game.png" class="img-fluid img-thumbnail col-5 col-lg-12" alt="multchess">
+                            </a>
+                        </div>
                         <div class="collapse mt-3" id="multchess">
-                            <p>I decided to expand upon the skills I learned from my first year Web Development Technologies module by creating functional and reliable online application with full duplex and low-latency capabilities. </p>
-                            <p>The game is complete with game settings, in-game chat, and ability to: request a takeback, offer a draw, resign, ask for a rematch.  </p>
+                            <p>I decided to expand upon the skills I learned from my first year Web Development Technologies module by creating a functional and reliable online application with full duplex and low-latency capabilities. I very much enjoy Chess, and so it seemed a sensible game to implement.</p>
+                            <p>The game is complete with game settings (such as timer duration and increment), in-game chat, and ability to: request a takeback, offer a draw, resign, and ask for a rematch.</p>
+                            <p>The website was created with mobile devices in mind and so can be played on-the-move. Because of this - along with the application's reliability and game flexibility - I often use this website to challenge my friends to a game of chess.</p>
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#multchess" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fa fa-angle-down"></i>
@@ -204,7 +231,7 @@
                         <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
                         <div class="collapse mt-3" id="ocr">
                             <p>With skills obtained from Coursera's "Getting Started with TensorFlow 2" course, I created a CNN to classify alphanumeric characters in the EMNIST dataset.</p>
-                            <p>To prevent overfitting, I used dropout layers, batch normalization, and regularization. I also wrote custom callbacks to analyse the models between epochs. This included graphing validation accuracy against epochs using Matplotlib. This aided me in hyperparameter tuning.</p>
+                            <p>To prevent overfitting, I used dropout layers, batch normalization, and regularization. I also wrote custom callbacks to analyse the models between epochs. This included graphing various statistics using Matplotlib (such as class prediction frequency). This aided me in hyperparameter tuning.</p>
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#ocr" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fa fa-angle-down"></i>
@@ -223,9 +250,9 @@
                         </h5>
                         <h3 class="mb-1">Lockdown Learning<span class="date mt-1">2020 - 2021</span></h3>
                         <p class="mb-3">Co-founded a tutor advertising company, for which I implemented a website. It lists partner tutors and has a search engine for students. Website (last maintained in 2021): <a href="http://www.lock-learn.co.uk/" target="_blank" rel="noopener noreferrer">lock-learn.co.uk</a></p>
-                        <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
+                        <a href="http://www.lock-learn.co.uk/" target="_blank" rel="noopener noreferrer"><img src="./projects/lockdown-learning/website.png" class="img-fluid img-thumbnail " alt="Lockdown Learning website"></a>
                         <div class="collapse mt-3" id="lockdownlearning">
-                            <p>During the first COVID-19 lockdown, I co-founded a company to advertise online GCSE/A-Level tutors. Our goal was to advertise through leaflets sent to schools and with our website.</p>
+                            <p>During the first COVID-19 lockdown, I co-founded a company to advertise online GCSE/A-Level tutors. Our goal was to advertise tutors to students, with our website and through leaflets sent to schools, so that they could continue working through school closures.</p>
                             <p>Under some time pressure, I learned essential web technologies, including HTML, CSS, and JavaScript (Node.js) in under a week to develop the company website.
                             <p>We successfully found many students for tutors listed on our website.</p>
                         </div>
@@ -245,10 +272,10 @@
                         </h5>
                         <h3 class="mb-1">8 Ball Pool<span class="date mt-1">2020</span></h3>
                         <p class="mb-3">PC game with offline multiplayer mode and single player mode, with a self-devised AI (with user selected difficulty)</p>
-                        <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
+                        <img src="./projects/8-ball-pool/game.png" class="img-fluid img-thumbnail" alt="8 Ball Pool">
                         <div class="collapse mt-3" id="pool">
-                            <p>For my Computer Science A-Level NEA, I wanted create something that combined concepts from all the subjects that I was studying. When deciding what to implement, we had just learned the formulae for 2D collisions of objects in Further Mathematics, and so 8 Ball Pool then seemed the perfect game to implement. The program combined formulas from Physics with OOP principles from Computer Science.</p>
-                            <p>The game was complete with user-friendly GUI, user options, multiplayer mode, and single player mode (with user selected difficulty). The most challenging part was implementing the single player mode AI. With pen and paper, I derived the formula to get which angle the AI should hit the cue ball in order to pot another ball.</p>
+                            <p>For my Computer Science A-Level NEA, I wanted create something that combined concepts from all the subjects that I was studying. At the time, we had just learned the formulae for 2D collisions of spheres in Further Mathematics, and so 8 Ball Pool then seemed the perfect game to implement. The program combined formulas from Physics/Mathematics with OOP principles from Computer Science.</p>
+                            <p>The game was complete with user-friendly GUI, user login (for a leaderboard), ability to save a game state, multiplayer mode, and single player mode (with user selected difficulty). The most challenging part was implementing the single player mode AI. With pen and paper, I derived the formula to obtain which angle the AI should hit the cue ball in order to pocket another ball. I also developed some heuristics for the AI to decide which ball to pocket, which hole to pocket into, and what power to hit the cue ball.</p>
                             <p>I received 100% for this coursework, which played a part in me being awarded the Computer Science Prize (given to the top CS student in the school).</p>
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#pool" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -268,8 +295,7 @@
                             <span class="badge bg-grey mb-2">TensorFlow.js</span>
                         </h5>
                         <h3 class="mb-1">My p5.js Phase (3)<span class="date mt-1">2019 - 2020</span></h3>
-                        <p class="mb-3">Various projects including: TensorFlow.js visualisation, Shortest path finding visualisation, SIR infection model simulation</p>
-                        <!-- <img src="..." class="img-fluid" alt="..."> -->
+                        <p class="mb-3">Various projects including: TensorFlow.js visualisation, Shortest path finding visualisation, and a SIR infection model simulation</p>
                         <div class="collapse mt-3" id="p5">
 
                             <p class="mb-3">During A-Levels, I enjoyed creating small visualisations for various concepts that I learned from school or through my own research. To do this, I used the p5.js library, which made it easy to draw graphics on a HTML canvas.</p>
@@ -289,16 +315,25 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a href="./projects/p5/tensorflow" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">TensorFlow.js Visualisation</h5></a>
-                                        <p>This project uses a TensorFlow.js neural network to learn XOR. While this is a trivial task for an ANN, it allowed for the learning process to be visualised. Here, I enjoyed experimenting with different model architectures - especially with the optimizer.</p>
+                                        <a href="./projects/p5/tensorflow" target="_blank" rel="noopener noreferrer">
+                                            <h5 class="mb-1"><i class="fa fa-link"> </i>TensorFlow.js Visualisation</h5>
+                                            <img src="./projects/p5/tensorflow/demo.png" class="img-fluid img-thumbnail col-4 my-3" alt="TensorFlow demo">
+                                        </a>
+                                        <p>This project uses a TensorFlow.js neural network to learn XOR. While this is a trivial task for an ANN, it allowed for the learning process to be visualised, with its outputs being drawn onto a grid. Here, the top-left and bottom-right of the grid are logical 0s, and the top-right and bottom-left are logical 1s. This is all the information the model is given to train, so it must find a way to extrapolate and segment the grid. Here, I enjoyed experimenting with different model architectures - especially with the optimizer.</p>
                                     </div>
                                     <div class="carousel-item">
-                                        <a href="./projects/p5/path-finding" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">Shorest Path Finding</h5></a>
-                                        <p>After learning about Dijkstra's and A* algorithms for shortest path finding at A-Level, I decided to implement a visualisation tool for both.</p>
+                                        <a href="./projects/p5/path-finding" target="_blank" rel="noopener noreferrer">
+                                            <h5 class="mb-1"><i class="fa fa-link"> </i>Shorest Path Finding</h5>
+                                            <img src="./projects/p5/path-finding/demo.png" class="img-fluid img-thumbnail col-7 my-3" alt="Path finding demo">
+                                        </a>
+                                        <p>After learning about Dijkstra's and A* algorithms for shortest path finding at A-Level, I decided to implement an interactive visualisation tool to show the process of both.</p>
                                     </div>
                                     <div class="carousel-item">
-                                        <a href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer"><h5 class="mb-1">SIR Infection Modelling</h5></a>
-                                        <p>During the COVID-19 pandemic, I read about the SIR model for spread of infection. Here, I created a collision model approximation to simulate infection spread and estimate the SIR model.</p>            
+                                        <a href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer">
+                                            <h5 class="mb-1"><i class="fa fa-link"> </i>SIR Infection Simulation</h5>
+                                            <img src="./projects/p5/sir-model/demo.png" class="img-fluid img-thumbnail col-6 my-3" alt="SIR simulation demo">
+                                        </a>
+                                        <p>During the COVID-19 pandemic, I read about the SIR model for spread of infection. Here, I created a ball collision model to approximate infection spread by simulation and estimate the SIR infection model.</p>            
                                     </div>
                                 </div>
                             </div>    
@@ -318,12 +353,13 @@
                         </h5>
                         <h3 class="mb-1">Neuroevolution Flappy Bird<span class="date mt-1">2019</span></h3>
                         <p class="mb-3">Neural network written from scratch learns flappy bird through reinforcement learning</p>
-                        <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
+                        <img src="./projects/flappy-bird/1.png" class="img-fluid img-thumbnail col-8" alt="Connect 4">
                         <div class="collapse mt-3" id="flappybird">
                             <p>Having completed the Machine Learning Course (by Stanford University) on Coursera, I decided to write my own neural networks from scratch (including all Matrix operations) in VB.NET. This tested my mathematical proficiency as well as my OOP skills, which I recently just learned.</p>
                             <p>I then decided to use this ANN to learn to play the flappy bird game - of which I wrote a clone.</p>
                             <p>The ANN architecture used was simple - just five inputs (related to position and y-velocity of the bird, and position of the next pipe), one hidden layer (64 parameters), and one output (whether to jump or not).</p>
-                            <p>As opposed to backpropagation, a genetic algorithm is used to train the ANN. In the initial stage of training, 1000 birds are initialised with random parameters and they simultaneously play until all the birds die. The fitness function is simple: the longer they live, the higher the score. The parents for the next stage of evolution are chosen proportionally according to their fitness, and then new birds are created by crossover of the parents. Each new bird is also subject to random mutation of its parameters.</p>
+                            <p class="mb-3">As opposed to backpropagation, a genetic algorithm is used to train the ANN. In the initial stage of training, 1000 birds are initialised with random parameters and they simultaneously play until all the birds die. The fitness function is simple: the longer they live, the higher the score. The parents for the next stage of evolution are chosen proportionally according to their fitness, and then new birds are created by crossover of the parents. Each new bird is also subject to random mutation of its parameters.</p>
+                            <img src="./projects/flappy-bird/1000.png" class="img-fluid img-thumbnail col-8 mb-3" alt="Connect 4">
                             <p>The ANN was able to learn to play the game perfectly (without dying) in under 20 stages of training.</p>
                         </div>
                         <a class="more text-center mt-3" data-bs-toggle="collapse" href="#flappybird" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -341,9 +377,9 @@
                         </h5>
                         <h3 class="mb-1">Connect 4<span class="date mt-1">2019</span></h3>
                         <p class="mb-3">Multiplayer mode and single player mode (Minimax with Alpha-Beta Pruning)</p>
-                        <!-- <img src="./projects/connect4/game.png" class="img-fluid" alt="Connect 4"> -->
+                        <img src="./projects/connect4/game.png" class="img-fluid img-thumbnail" alt="Connect 4">
                         <div class="collapse mt-3" id="connect4">
-                            <p>In VB.NET, I created a Connect 4 PC application, complete with offline multiplayer mode and single player mode. For the single player AI, I used the minimax algorithm and improved its performance with Alpha-beta pruning. Even at low depths of search (4-5) the AI was able to reliably beat my A-Level classmates.</p>
+                            <p>In VB.NET, I created a Connect 4 PC application, complete with offline multiplayer mode and single player mode. For the single player AI, I used the minimax algorithm and improved its performance with alpha-beta pruning. For this, I derived my own heuristics, and even at low depths of search (5-6) the AI was able to reliably beat my A-Level classmates.</p>
                             <p>This project was inspired by AlphaZero's achievements in beating world champions at Go. Reading about this, I wanted to explore the applications of similar AI (albeit much simpler) for myself. The project also allowed me to learn how to create a user-friendly GUI and enabled me to implement my new-found knowledge of OOP principles.</p>
                             <p>VB.NET was used since it was the language we learned in A-Level Computer Science.</p>
                         </div> 
@@ -383,7 +419,7 @@
     <section class="text-start content-section border-gradient" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-8 mx-auto p-4">
                     <h1 class="pb-2 border-gradient">Contact me</h1>
                     <p>Feel free to contact me through any of the following media:</p>
                     <p><a href="mailto:calebtham02@gmail.com">calebtham02@gmail.com</a><br>
