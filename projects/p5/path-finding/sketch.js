@@ -9,7 +9,7 @@ function Square(x, y) {
 
 const label = document.getElementById("mode")
 
-const squareSize = 35;
+const squareSize = 25;
 var astar = true
 var clickMode = "wall"
 var addWallMode = false
