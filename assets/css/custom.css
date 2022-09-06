@@ -8,7 +8,7 @@ div.separator {
     width: 100%;
     height: 5vw;
     margin-left: 0px;
-    background: linear-gradient(90deg, #4561d2 0%, #4561d2 5%, #1a1a1a 5%, #1a1a1a 95%, #bb5b9d 95%, #bb5b9d 100%);
+    background-image: linear-gradient(90deg, #4561d2 0%, #4561d2 5%, #1a1a1a 5%, #1a1a1a 95%, #bb5b9d 95%, #bb5b9d 100%);
     z-index: 1000;
 }
 
@@ -31,11 +31,13 @@ div.separator {
 #sunsetBoat {
     width: 100vw;
     position: fixed;
-    z-index: -1;
+    background-attachment: fixed;
     background-position: bottom;
     background-size: cover; 
+    z-index: -1;
     height: max(140vh,90vw);
     transition: opacity 0.2s ease-in-out;
+    transform: translateZ(0);
 }
 
 #sunsetSun,
