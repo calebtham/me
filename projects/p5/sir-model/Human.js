@@ -1,11 +1,14 @@
+// Class to represent a human. Represented as 2D elastic balls
 class Human {
     constructor(x, y, vx, vy, m, r) {
+        // Physics
         this.x = x
         this.y = y
         this.velocity = new Vector(vx, vy)
         this.mass = m
         this.radius = m
 
+        // Infection
         this.isInfected = false;
         this.isRecovered = false;
         this.isAlive = true;
@@ -14,9 +17,11 @@ class Human {
         this.recoveryRate = 0.006
         this.deathRate = 0.1
     }
+
+    // Update the human's health and position
     update() {
         if (this.isAlive) {
-            //disease
+            // Disease
             if (this.isInfected) {
                 if (random() < this.recoveryRate) {
                     if (random() < this.deathRate) {
@@ -27,7 +32,7 @@ class Human {
                 }
             }
 
-            //position
+            // Position
             this.x += this.velocity.i
             this.y += this.velocity.j
             if (this.x - this.radius < 0) {
@@ -51,8 +56,9 @@ class Human {
                 this.velocity = new Vector(0, 0)
             }
         }
-
     }
+
+    // Setters
     setTransmissionRate(rate) {
         this.transmissionRate = rate
     }
@@ -69,6 +75,8 @@ class Human {
         this.setRecovered()
         this.isAlive = false
     }
+
+    // Draw the human
     display() {
         if (this.isAlive) {
             if (this.isInfected) {
@@ -82,6 +90,8 @@ class Human {
             ellipse(this.x, this.y, this.radius * 2, this.radius * 2)
         }
     }
+
+    // Check if b1 intersects b2
     static intersects(b1, b2) {
         if (!b1.isAlive || !b2.isAlive) {
             return false
@@ -102,6 +112,8 @@ class Human {
             return false
         }
     }
+
+    // Change velocity of b1 and b2 from their collision
     static resolveCollision(b1, b2) {
         var v1 = b1.velocity
         var v2 = b2.velocity

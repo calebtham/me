@@ -4,12 +4,14 @@ let transmissionRate
 
 const R = document.getElementById("R")
 
+// Initalise canvas and huamns
 function setup() {
   transmissionRate = createSlider(0, 0.5, 0.2, 0.025)
   transmissionRate.position(0, 140)
   R.innerText = transmissionRate.value()
   createCanvas(800, 600);
 
+  // Start with 4 infected humans
   Humans.push(new Human(600, 200, random(-3, 3), random(-3, 3), 5, 5))
   Humans.push(new Human(600, 201, random(-3, 3), random(-3, 3), 5, 5))
   Humans.push(new Human(600, 202, random(-3, 3), random(-3, 3), 5, 5))
@@ -19,18 +21,17 @@ function setup() {
   Humans[2].setInfected()
   Humans[3].setInfected()
 
+  // Add 500 more humans
   for (var i = 0; i < 500; i++) {
     Humans.push(new Human(random(width), random(height), random(-3, 3), random(-3, 3), 5, 5))
   }
 }
 
-function mouseDragged() {
-  R.innerText = transmissionRate.value()
-}
-
+// Each tick, update the humans and draw them
 function draw() {
   background(0);
 
+  // Resolve collisions
   for (var i = 0; i < Humans.length; i++) {
     b1 = Humans[i]
     for (var j = i + 1; j < Humans.length; j++) {
@@ -41,12 +42,14 @@ function draw() {
     }
   }
 
+  // Update humans and draw them
   for (var i = 0; i < Humans.length; i++) {
     b = Humans[i]
     b.update()
     b.display()
   }
 
+  // Information for graph
   if (frameCount % 10 == 0) {
     var susceptible = 0
     var infected = 0
@@ -77,7 +80,7 @@ function draw() {
     }
   }
 
-  //graph
+  // Draw the graph
   strokeWeight(2)
   fill(255, 100)
   var w = width
@@ -94,5 +97,8 @@ function draw() {
     stroke(0)
     line(i * step, h - Model[i][3] * h, (i + 1) * step, h - Model[i + 1][3] * h)
   }
+}
 
+function mouseDragged() {
+  R.innerText = transmissionRate.value()
 }

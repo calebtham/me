@@ -1,9 +1,11 @@
+// Document
 const tl = document.getElementById("tl")
 const tr = document.getElementById("tr")
 const bl = document.getElementById("bl")
 const br = document.getElementById("br")
 const loss = document.getElementById("loss")
 
+// Variables
 let model;
 let resolution = 20;
 let cols;
@@ -11,6 +13,8 @@ let rows;
 let xs;
 let epoch = 0;
 
+
+// Data
 const train_xs = tf.tensor2d([
     [0, 0],
     [1, 0],
@@ -24,6 +28,7 @@ const train_ys = tf.tensor2d([
     [0]
 ]);
 
+// Initialize canvas and model
 function setup() {
     createCanvas(400, 400);
     cols = width / resolution;
@@ -40,7 +45,7 @@ function setup() {
     }
     xs = tf.tensor2d(inputs);
 
-
+    // Create MLP
     model = tf.sequential();
     let hidden1 = tf.layers.dense({
         inputShape: [2],
@@ -68,6 +73,7 @@ function setup() {
 
 }
 
+// Train MLP wrapper
 function train() {
     trainModel().then(result => {
         epoch++
@@ -76,6 +82,7 @@ function train() {
     });
 }
 
+// Train MLP
 function trainModel() {
     return model.fit(
         train_xs,
@@ -85,6 +92,7 @@ function trainModel() {
     );
 }
 
+// Draw results every tick
 function draw() {
     background(0);
 

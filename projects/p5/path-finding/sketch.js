@@ -1,3 +1,4 @@
+// Square class
 function Square(x, y) {
   this.x = x
   this.y = y
@@ -7,6 +8,7 @@ function Square(x, y) {
   }
 }
 
+// Variables
 const label = document.getElementById("mode")
 
 const squareSize = 25;
@@ -25,6 +27,7 @@ var cur = new Square(0, 0)
 const maxScore = 100000
 const root2 = 1.41421356237
 
+// Initalise canvas
 function setup() {
   createCanvas(Math.min(windowWidth *  2/3, 1000), Math.min(windowHeight *  2/3, 1000))
   background(0)
@@ -41,12 +44,17 @@ function setup() {
   }
 }
 
+// Every tick, draw to canvas
 function draw() {
   background(255)
   stroke(0, 50)
+
+  // Add walls
   if (addWallMode) {
     walls[getMouseSquare().x][getMouseSquare().y] = true
   }
+
+  // If searching, Add search colours
   if (calcPath) {
     for (let i = 0; i < array.length; i++) {
       for (let j = 0; j < array[0].length; j++) {
@@ -64,16 +72,20 @@ function draw() {
         rect(i * squareSize, j * squareSize, squareSize, squareSize)
       }
     }
+
+    // Perform 5 iterations of search per tick
     for (var i = 0; i < 5; i++) {
-      if (!completed[dest.x][dest.y]) {
+      if (!completed[dest.x][dest.y]) { // If searching
         update()
-      } else if (!(cur.x == start.x && cur.y == start.y)) {
+      } else if (!(cur.x == start.x && cur.y == start.y)) { // If path found
         getPath()
         if (i > 0) {
           break
         }
       }
     }
+
+    // If not searching, just add start, dest, wall colours
   } else {
 
     for (let i = 0; i < array.length; i++) {
@@ -106,6 +118,7 @@ function keyPressed() {
   let rows = int(width / squareSize)
   let cols = int(height / squareSize)
 
+  // Start/stop search
   if (keyCode == ENTER) {
     calcPath = !calcPath
 
@@ -128,13 +141,17 @@ function keyPressed() {
       scores[start.x][start.y].gScore = 0
       cur = start
     }
-  } else if (keyCode == ESCAPE) {
+
+    // Clear grid
+  } else if (keyCode == ESCAPE) { //
     calcPath = false
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
         walls[i][j] = false
       }
     }
+
+    // Toggle algorithm
   } else if (key == "a") {
     astar = !astar
     label.innerText = astar ? "Mode: A* Search" : "Mode: Dijkstra's Algorithm"
@@ -143,24 +160,24 @@ function keyPressed() {
 
 function mousePressed() {
   calcPath = false
-  if (getMouseSquare().x == start.x && getMouseSquare().y == start.y) {
+  if (getMouseSquare().x == start.x && getMouseSquare().y == start.y) { // Move start
     clickMode = "start"
     start = new Square(-1, -1)
-  } else if (getMouseSquare().x == dest.x && getMouseSquare().y == dest.y) {
+  } else if (getMouseSquare().x == dest.x && getMouseSquare().y == dest.y) { // Move dest
     clickMode = "dest"
     dest = new Square(-1, -1)
-  } else if (clickMode == "wall") {
+  } else if (clickMode == "wall") { // Add wall
     addWallMode = true
   }
 }
 
 function mouseReleased() {
   calcPath = false
-  if (clickMode == "start") {
+  if (clickMode == "start") { // Move start
     start = getMouseSquare()
-  } else if (clickMode == "dest") {
+  } else if (clickMode == "dest") { // Move dest
     dest = getMouseSquare()
-  } else {
+  } else { // Add wall
     addWallMode = false
   }
   clickMode = "wall"
@@ -179,6 +196,7 @@ function getMouseSquare() {
   )
 }
 
+// Get path from complete search
 function getPath() {
   for (let i = -1; i <= 1; i++) {
     for (let j = -1; j <= 1; j++) {
@@ -197,8 +215,10 @@ function getPath() {
   }
 }
 
+// Perform iteration of search
 function update() {
 
+    // Update/search frontier
   for (let i = -1; i <= 1; i++) {
     for (let j = -1; j <= 1; j++) {
       let next = new Square(cur.x + i, cur.y + j)
@@ -210,6 +230,7 @@ function update() {
     }
   }
 
+  // Get best next square
   bestNextScore = maxScore
   bestNext = new Square(0, 0)
   for (let i = 0; i < array.length; i++) {
@@ -227,6 +248,7 @@ function update() {
   completed[cur.x][cur.y] = true
 }
 
+// Update node score
 function updateNode(next) {
   let weight = 1
   if (Math.abs(cur.x - next.x) + Math.abs(cur.y - next.y) == 2) {
@@ -239,6 +261,7 @@ function updateNode(next) {
   }
 }
 
+// Get heuristic distance
 function getHScore(next, dest) {
   dist(next.x, next.y, dest.x, dest.y)
 }
