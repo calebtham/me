@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
     <link rel="stylesheet" href="./assets/css/light-mode.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
     <link rel="stylesheet" href="./assets/css/cabin.css">
     <link rel="stylesheet" href="./assets/css/lora.css">
     <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css">
@@ -16,6 +17,7 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
     
+    <!-- Navbar -->
     <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
         <div class="container"><a class="navbar-brand" id="navLogo" href="#">Caleb</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -29,6 +31,7 @@
         </div>
     </nav>
 
+    <!-- Front cover -->
     <header class="cover">
         <div id="sunsetSun"></div>
         <div id="sunsetWater"></div>
@@ -61,6 +64,7 @@
 
     <div class="separator"></div>
 
+    <!-- About section -->
     <section class="text-start content-section" id="about">
         <div class="container">
             <div class="row">
@@ -78,9 +82,9 @@
                     </div>
                     <div class="col-md-8">
                         <h1 class="pb-2 border-gradient">About me</h1>
-                        <p>I am a highly motivated and determined aspiring Software Engineer, currently in my third (penultimate) year studying Computer Science (MEng) at the University of Warwick. 
-                        <p>I have always been captivated by the pervasiveness of technology. Reading about the field's profound impact at an early age spurred me to pursue a career in Software Engineering. As I started to learn how to program, I immediately adored the combination of problem solving and creative thinking, which only furthered to the industry's appeal. Areas I'm particularly passionate about are AI/ML and full stack development. I now find myself coding for my studies, for work (most recently as a Software Developer for <a href="https://progressive-research.com/" target="_blank" rel="noopener noreferrer">Progressive Equity Research</a>), and for fun!</p>
-                        <p id="cv">In my spare time, I enjoy continuing to express my creative side through composing music, photography, and graphic design - even still, I find myself glued to a screen, using software such as Logic Pro and Adobe's Creative Suite. As well as this, since I love sharing my passions, I became Head of Marketing at Warwick Jazz Society.</p>
+                        <p>I am a motivated and determined aspiring Software Engineer, currently in my third (penultimate) year studying Computer Science (MEng) at the University of Warwick. 
+                        <p>I have always been captivated by the pervasiveness of technology. Reading about the field's profound impact at an early age spurred me to pursue a career in Software Engineering. As I started to learn how to program, I immediately adored the combination of problem solving and creative thinking, which only furthered the industry's appeal. Areas I'm particularly passionate about are AI/ML and full stack development. I now find myself coding for my studies, for work (most recently as a Software Developer for <a href="https://progressive-research.com/" target="_blank" rel="noopener noreferrer">Progressive Equity Research</a>), and for fun!</p>
+                        <p id="cv">In my spare time, I enjoy continuing to express my creative side through composing music, photography, and graphic design - even still, I find myself glued to a screen, using software such as Logic Pro and Adobe's Creative Suite. In addition, since I love sharing my passions, I became Head of Marketing at Warwick Jazz Society.</p>
                         <h2 class="pb-2 border-gradient w-md-50">Curriculum Vitae</h2>
                         <p>Have a read through my <a href="./assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>. (Last updated: 6th September 2022)</p>
                     </div>
@@ -91,6 +95,7 @@
 
     <div class="separator"></div>
 
+    <!-- Projects section -->
     <section class="text-start projects-section content-section" id="projects">
         <div class="container">
             <div class="col-lg-8 mx-auto">
@@ -101,6 +106,7 @@
 
         <div class="col-lg-10 col-12 mx-auto row">
 
+            <!-- Coursework -->
             <div class="col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -117,26 +123,24 @@
                     </h5>
                     <h3 class="mb-1">Coursework Highlights (4)<span class="date mt-1">2020 - 2024</span></h3>
                     <p class="mb-3">Individual coursework completed at the University of Warwick, including: a chore scheduling app, an AI scheduler, a multithreaded packet sniffer, and a parser/lexer/interpreter.</p>
-                    <!-- <img src="..." class="img-fluid" alt="..."> -->
                     <div class="collapse mt-3" id="warwick">
                         <div id="warwickCorousel">
                             <div class="mx-auto mb-3 text-center">
-                                <btn class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="prev">
+                                <button class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
-                                </btn>
+                                </button>
                                 <span class="more">1 / 4</span>
-                                <btn class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="next">
+                                <button class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
-                                </btn>
+                                </button>
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col">
                                             <h5 class="mb-1">Enchore (a chore scheduling app)</h5>
-                                            <!-- <img src="./projects/coursework/enchore/logo.png" class="img-fluid img-thumbnail my-3" alt="logo"> -->
                                             <p class="mb-3">With PHP, JavaScript, and SQL, I implemented a chore scheduling web app, complete with a database, user authentication system, and push notifications.</p>
                                             <p class="mb-3">Users may create, edit, delete their account. A user can create or join a house, for which chores can be organised and scheduled to repeat. Chores are assigned to a member of the house and can be edited and marked as complete. There is also a house leaderboard that ranks house members according to different factors (such as chore completion rate).</p>
                                             <div class="row">
@@ -179,12 +183,13 @@
                             </div>
                         </div>
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#warwick" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#warwick" role="button" aria-expanded="false" aria-controls="warwick">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- Multchess -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -210,12 +215,13 @@
                         <p>The game is complete with game settings (such as timer duration and increment), in-game chat, and ability to: request a takeback, offer a draw, resign, and ask for a rematch.</p>
                         <p>The website was created with mobile devices in mind and so can be played on-the-move. Because of this - along with the application's reliability and game flexibility - I often use this website to challenge my friends to a game of chess.</p>
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#multchess" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#multchess" role="button" aria-expanded="false" aria-controls="multchess">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- TensorFlow 2 -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -237,12 +243,13 @@
                         <p>(This shows a model confusing 'L's with '1' and 'f's with 'F')</p>
                         <p>For the balanced (digits and letters merged) dataset, the model managed a validation accuracy of 89.21%, and a validation accuracy of 99.52% for the digits dataset.</p>
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#ocr" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#ocr" role="button" aria-expanded="false" aria-controls="ocr">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- Lockdown Learning -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -260,12 +267,13 @@
                         <p>Under some time-pressure, I learned essential web technologies, including HTML, CSS, and JavaScript (Node.js) in under a week to develop the organisation website.
                         <p>We successfully found many students for tutors listed on our website.</p>
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#lockdownlearning" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#lockdownlearning" role="button" aria-expanded="false" aria-controls="lockdownlearning">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- 8 Ball Pool -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -282,12 +290,13 @@
                         <p>The game was complete with user-friendly GUI, user login (for a leaderboard), ability to save a game state, multiplayer mode, and single player mode (with user selected difficulty). The most challenging part was implementing the single player mode AI. With pen and paper, I derived the formula to obtain which angle the AI should hit the cue ball to pocket another ball. I also developed some heuristics for the AI to decide which ball to pocket, which hole to pocket into, and what power to hit the cue ball.</p>
                         <p>I received 100% for this coursework, which played a part in me being awarded the Computer Science Prize (given to the top CS student in the school).</p>
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#pool" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#pool" role="button" aria-expanded="false" aria-controls="pool">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- p5 -->
             <div class="col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -307,15 +316,15 @@
 
                         <div id="p5Corousel">
                             <div class="mx-auto mb-3 text-center">
-                                <btn class="btn btn-carousel" type="button" data-bs-target="#p5Corousel" data-bs-slide="prev">
+                                <button class="btn btn-carousel" type="button" data-bs-target="#p5Corousel" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
-                                </btn>
+                                </button>
                                 <span class="more">1 / 3</span>
-                                <btn class="btn btn-carousel" type="button" data-bs-target="#p5Corousel" data-bs-slide="next">
+                                <button class="btn btn-carousel" type="button" data-bs-target="#p5Corousel" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
-                                </btn>
+                                </button>
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -335,19 +344,20 @@
                                 <div class="carousel-item">
                                     <a href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer"><h5 class="mb-1"><i class="fa fa-link"> </i>SIR Infection Simulation</h5></a>
                                     <div class="row">
-                                        <a class="col-10 col-md-6" href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer"><img class="img-fluid img-thumbnail my-3" src="./projects/p5/sir-model/demo.png" class="img-fluid img-thumbnail my-3" alt="SIR simulation demo"></a>
+                                        <a class="col-10 col-md-6" href="./projects/p5/sir-model" target="_blank" rel="noopener noreferrer"><img class="img-fluid img-thumbnail my-3" src="./projects/p5/sir-model/demo.png" alt="SIR simulation demo"></a>
                                         <p class="col-md-6 my-3" >During the COVID-19 pandemic, I read about the SIR model for spread of infection. Here, I created a ball collision model to approximate infection spread by simulation and estimate the SIR infection model.</p>                
                                     </div>
                                 </div>
                             </div>
                         </div>    
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#p5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#p5" role="button" aria-expanded="false" aria-controls="p5">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- Neuroevolution Flappy Bird -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -366,12 +376,13 @@
                         <img src="./projects/flappy-bird/1000.png" class="img-fluid img-thumbnail col-8 mb-3" alt="Connect 4">
                         <p>The MLP was able to learn to play the game perfectly (without dying) in under 20 stages of training.</p>
                     </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#flappybird" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#flappybird" role="button" aria-expanded="false" aria-controls="flappybird">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
             </div>
 
+            <!-- Connect 4 -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
@@ -387,7 +398,7 @@
                         <p>This project was inspired by AlphaZero's achievements in beating world champions at Go. Reading about this, I wanted to explore the applications of similar AI (albeit much simpler) for myself. The project also allowed me to learn how to create a user-friendly GUI and enabled me to implement my new-found knowledge of OOP principles.</p>
                         <p>VB.NET was used since it was the language we learned in A-Level Computer Science.</p>
                     </div> 
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#connect4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#connect4" role="button" aria-expanded="false" aria-controls="connect4">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
@@ -398,6 +409,7 @@
 
     <div class="separator"></div>
     
+    <!-- Contact section -->
     <section class="text-start content-section border-gradient" id="contact">
         <div class="container">
             <div class="row">
@@ -418,12 +430,7 @@
         </div>
     </section>
 
-    <!-- <footer>
-        <div class="container text-center">
-            <p>By Caleb Tham</p>
-        </div>
-    </footer> -->
-
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/navbar.js"></script>

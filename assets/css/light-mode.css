@@ -1,42 +1,51 @@
+/*
+==============================
+Transition
+==============================
+*/
 body,
 #mainNav a,
 #mainNav .navbar-toggler,
 .content-section,
 .about-section,
-#mainNav .nav-link.active,
-.border-gradient {
+#mainNav .nav-link.active {
     transition: 
         color 0.6s linear,
         border-color 0.2s linear,
-        background-color 0.2s linear,
-        border-image-source 1s linear
-        !important;
+        background-color 0.2s linear;
 }
 div.separator {
     transition: background-color 1s linear !important;
 }
 
+/*
+==============================
+Generic
+==============================
+*/
 [data-theme="light"] {
     background-color: white !important;
     color: black !important;
 }
 
-[data-theme="light"] #mainNav.navbar-shrink,
-[data-theme="light"] .about-section {
-    background-color: white !important;
+[data-theme="light"] .bg-primary {
+    background-color: #f57f48 !important;
 }
 
-[data-theme="light"] #mainNav a,
-[data-theme="light"] #arrow {
-    color: black !important;
+[data-theme="light"] .bg-secondary {
+    background-color: #dd5bb0 !important;
 }
 
-[data-theme="light"] #mainNav .nav-link.active {
-    background-color: rgb(0,0,0,0.1) !important;
+[data-theme="light"] .bg-grey {
+    background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-[data-theme="light"] .content-section {
-    background-color: #eee !important;
+[data-theme="light"] .img-thumbnail {
+    background: linear-gradient(90deg, #f57f4855 0%, #dd5bb044 100%) !important;
+}
+
+[data-theme="light"] .border-gradient {
+    border-image-source: linear-gradient(90deg, #f57f48 0%, #dd5bb0 100%) !important;
 }
 
 [data-theme="light"] .btn-circle {
@@ -56,14 +65,42 @@ div.separator {
     color: white !important;
 }
 
+/*
+==============================
+Layout
+==============================
+*/
+[data-theme="light"] .content-section {
+    background-color: #eee !important;
+}
+
 [data-theme="light"] div.separator {
     background-image: linear-gradient(90deg, #f57f48 0%, #f57f48 5%, white 5%, white 95%, #dd5bb0 95%, #dd5bb0 100%) !important;
 }
 
-[data-theme="light"] .border-gradient {
-    border-image-source: linear-gradient(90deg, #f57f48 0%, #dd5bb0 100%) !important;
+/* 
+==============================
+Navbar
+==============================
+*/
+[data-theme="light"] #mainNav.navbar-shrink,
+[data-theme="light"] .about-section {
+    background-color: white !important;
 }
 
+[data-theme="light"] #mainNav a {
+    color: black !important;
+}
+
+[data-theme="light"] #mainNav .nav-link.active {
+    background-color: rgb(0,0,0,0.1) !important;
+}
+
+/* 
+==============================
+Front cover
+==============================
+*/
 [data-theme="light"] header.cover #sunsetSun,
 [data-theme="light"] header.cover #sunsetWater,
 [data-theme="light"] header.cover #sunsetBoat {
@@ -75,6 +112,15 @@ div.separator {
     opacity: 0% !important;
 }
 
+[data-theme="light"] #arrow {
+    color: black !important;
+}
+
+/* 
+==============================
+Project card
+==============================
+*/
 [data-theme="light"] .card {
     background-color: white !important;
     color: black !important;
@@ -97,22 +143,11 @@ div.separator {
     filter: brightness(0) !important;
 }
 
-[data-theme="light"] .bg-primary {
-    background-color: #f57f48 !important;
-}
-
-[data-theme="light"] .bg-secondary {
-    background-color: #dd5bb0 !important;
-}
-
-[data-theme="light"] .bg-grey {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-}
-
-[data-theme="light"] .img-thumbnail {
-    background: linear-gradient(90deg, #f57f4855 0%, #dd5bb044 100%) !important;
-}
-
+/* 
+==============================
+Mobile
+==============================
+*/
 @media only screen and (max-width: 991px) {
     [data-theme="light"] #mainNav {
         background-color: white !important;

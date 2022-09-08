@@ -1,14 +1,15 @@
+/**
+ * Animate collapsing navbar
+ */
 (function() {
   "use strict"; // Start of use strict
 
   var mainNav = document.querySelector('#mainNav');
 
   if (mainNav) {
-
     var navbarCollapse = mainNav.querySelector('.navbar-collapse');
     
     if (navbarCollapse) {
-
       var collapse = new bootstrap.Collapse(navbarCollapse, {
         toggle: false
       });
@@ -25,7 +26,6 @@
 
     // Collapse Navbar
     var collapseNavbar = function() {
-
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
       if (scrollTop > window.innerHeight * 0.1 || window.innerWidth < 992) {
