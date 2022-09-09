@@ -116,6 +116,10 @@ Front cover
     color: black !important;
 }
 
+[data-theme="light"] #me {
+    filter: brightness(140%) contrast(80%);
+}
+
 /* 
 ==============================
 Project card
