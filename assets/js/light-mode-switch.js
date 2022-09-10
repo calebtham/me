@@ -15,6 +15,6 @@ $(() => {
             $("#lightSwitch").children().addClass("fa-sun-o");
             $("#lightSwitch").children().removeClass("fa-moon-o");
         }
-        parallaxScroll();
+        window.dispatchEvent(new CustomEvent('scroll')); // Trigger scroll handler
     });
 });
