@@ -113,11 +113,11 @@ Front cover
 }
 
 [data-theme="light"] #arrow {
-    color: black !important;
+    color: black;
 }
 
 [data-theme="light"] #me {
-    filter: brightness(140%) contrast(80%);
+    filter: brightness(135%) contrast(80%);
 }
 
 /* 
