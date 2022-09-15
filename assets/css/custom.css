@@ -70,6 +70,9 @@ div.separator {
 Navbar
 ==============================
 */
+#mainNav {
+    will-change: padding-top, padding-bottom, background-color;
+}
 .navbar-brand {
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -104,6 +107,7 @@ Front cover
     z-index: -1;
     height: max(140vh,90vw);
     transition: opacity 0.2s ease-in-out;
+    will-change: transform;
 }
 
 #sunsetSun,
