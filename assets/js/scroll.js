@@ -7,13 +7,15 @@ window.addEventListener("DOMContentLoaded", () => {
     const boat = document.getElementById("sunsetBoat");
     const arrow = document.getElementById("arrow");
     
-    if (window.innerWidth > 991) { // Disable for mobile layout
+    if (window.innerWidth > 991) { // Desktop
         window.addEventListener("scroll", parallaxScroll);
         parallaxScroll();
+    } else { // Mobile
+        window.addEventListener("scroll", mobileScroll);
     }
     
     /**
-     * Change position of elements when scrolling
+     * Change position of elements when scrolling and show/hide arrow
      */
     function parallaxScroll() {
         let translate = Math.max(window.scrollY, 0);
@@ -29,6 +31,17 @@ window.addEventListener("DOMContentLoaded", () => {
             mountain.style.filter = `brightness(${brightness}%)`;
             arrow.style.color = (translate === 0) ? "white" : "#FFFFFF00";
         }
-    
+    }
+
+    /**
+     * Show/hide arrow
+     */
+    function mobileScroll() {
+        let translate = Math.max(window.scrollY, 0);
+        if (document.body.getAttribute("data-theme")) { // light mode
+            arrow.style.color = (translate === 0) ? "black" : "#00000000";
+        } else { // dark mode
+            arrow.style.color = (translate === 0) ? "white" : "#FFFFFF00";
+        }
     }
 });
