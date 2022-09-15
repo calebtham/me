@@ -7,9 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const boat = document.getElementById("sunsetBoat");
     const arrow = document.getElementById("arrow");
     
-    window.addEventListener("scroll", parallaxScroll);
-
-    parallaxScroll()
+    if (window.innerWidth > 991) { // Disable for mobile layout
+        window.addEventListener("scroll", parallaxScroll);
+        parallaxScroll();
+    }
     
     /**
      * Change position of elements when scrolling
