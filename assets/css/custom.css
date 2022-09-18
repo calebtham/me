@@ -104,11 +104,10 @@ Front cover
     position: fixed;
     background-position: bottom;
     background-size: cover; 
-    top: 0;
-    left: 0;
     z-index: -1;
     height: max(140vh,90vw);
     transition: opacity 0.2s ease-in-out;
+    will-change: transform;
 }
 
 #sunsetSun,
