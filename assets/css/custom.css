@@ -3,6 +3,10 @@
 Generic
 ==============================
 */
+body {
+    display: none; /* So can switch to light mode before displaying */
+}
+
 .border-gradient {
     border-bottom: solid 10px !important;
     border-image-slice: 1;
