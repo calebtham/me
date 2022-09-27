@@ -46,6 +46,11 @@ body {
     box-shadow: none;
 }
 
+.date {
+    font-style: italic;
+    font-size: small;
+}
+
 /*
 ==============================
 Layout
@@ -183,8 +188,6 @@ Project card
 }
 
 .card .date {
-    font-style: italic;
-    font-size: small;
     float: right;
 }
 
