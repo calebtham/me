@@ -103,13 +103,44 @@
             </div>
         </div>
 
-        <div class="col-lg-10 col-12 mx-auto row">
+        <div class="col-lg-10 col-12 mx-auto row projects-container">
+
+            <!-- Multchess -->
+            <div class="col-md-12 mb-3 p-0 px-md-3 pb-md-3">
+                <div class="card">
+                    <h5 class="mb-2">
+                        <span class="badge bg-primary mb-2">AI/ML research</span>
+                        <span class="badge bg-primary mb-2">GAN</span>
+                        <span class="badge bg-primary mb-2">CNN</span>
+                        <span class="badge bg-secondary mb-2">Python</span>
+                        <span class="badge bg-secondary mb-2">JavaScript</span>
+                        <span class="badge bg-grey mb-2">TensorFlow 2</span>
+                        <span class="badge bg-grey mb-2">React</span>
+                        <span class="badge bg-grey mb-2">Flask</span>
+                    </h5>
+                    <h3 class="mb-1" style="text-transform: none;">deJPEG<span class="date mt-1">2023</span></h3>
+                    <p class="mb-3">My third year dissertation title, "JPEG compression detection and restoration", for which I was awarded a First Class (86%). The detector and restorer models (and demo website) are available on my <a href="https://github.com/calebtham/deJPEG" target="_blank">GitHub repo</a>.</p>
+                    <div class="inline mx-auto">
+                        <div class="link" onclick="window.open('https://github.com/calebtham/deJPEG')">
+                            <img src="./projects/deJPEG/finalsolution.jpg" class="img-fluid img-thumbnail col-5 col-lg-12" alt="deJPEG">
+                        </div>
+                    </div>
+                    <div class="collapse mt-3" id="multchess">
+                        <p>Abstract: "JPEG compression is commonly used to reduce the storage size of digital images. However, the process introduces complex artifacts that degrade the visual quality of images. This is particularly problematic for images that are compressed multiple times, often referred to as double compressed images. Due to the lossy nature of JPEG compression, we are unable to retrieve the original image. Still, it is possible to enhance the image’s visual appeal by estimating its appearance prior to its compression. To tackle this, we propose a system that detects whether an image has undergone JPEG compression and, if necessary, applies an artifact removal process. In particular, we develop a detector that uses a convolutional neural network to differentiate between single and double compressed images, achieving near state-of-the-art accuracy in this task, despite using a simpler architecture compared to existing methods. For the restorer, we use a generative adversarial network and demonstrate that it is equally effective on both single and double compressed images. Furthermore, by incorporating MS-SSIM and the widely used VGG-19 network into our perceptual loss function, as well as employing NoGAN training, we outperform a previous state-of-the-art method for JPEG artifact removal. We deploy our system as a web application."</p>
+                        <p>While the ML research formed the bulk of the project, I also developed a website to demo the proposed ML models. This was mainly just an opportunity for me to learn React and refresh my knowledge on Flask! The website and models can be setup following instructions on this <a href="https://github.com/calebtham/deJPEG" target="_blank">Github repo</a>.</p>
+                    </div>
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#multchess" role="button" aria-expanded="false" aria-controls="multchess">
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                </div> 
+            </div>
 
             <!-- Coursework -->
             <div class="col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
                     <h5 class="mb-2">
                         <span class="badge bg-primary mb-2">AI</span>
+                        <span class="badge bg-primary mb-2">Big Data</span>
                         <span class="badge bg-primary mb-2">Web Dev</span>
                         <span class="badge bg-primary mb-2">Multithreading</span>
                         <span class="badge bg-secondary mb-2">Java</span>
@@ -118,10 +149,12 @@
                         <span class="badge bg-secondary mb-2">JavaScript</span>
                         <span class="badge bg-secondary mb-2">PHP</span>
                         <span class="badge bg-secondary mb-2">SQL</span>
+                        <span class="badge bg-grey mb-2">Hadoop</span>
+                        <span class="badge bg-grey mb-2">Hive</span>
                         <span class="badge bg-grey mb-2">JavaCC</span>
                     </h5>
-                    <h3 class="mb-1">Coursework Highlights (4)<span class="date mt-1">2020 - 2024</span></h3>
-                    <p class="mb-3">Individual coursework completed at the University of Warwick, including: a chore scheduling app, an AI scheduler, a multithreaded packet sniffer, and a parser/lexer/interpreter.</p>
+                    <h3 class="mb-1">Coursework Highlights (5)<span class="date mt-1">2020 - 2024</span></h3>
+                    <p class="mb-3">Individual coursework completed at the University of Warwick, including: big data analysis, a chore scheduling app, an AI scheduler, a multithreaded packet sniffer, and a parser/lexer/interpreter.</p>
                     <div class="collapse mt-3" id="warwick">
                         <div id="warwickCorousel">
                             <div class="mx-auto mb-3 text-center">
@@ -129,7 +162,7 @@
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <span class="more">1 / 4</span>
+                                <span class="more">1 / 5</span>
                                 <button class="btn btn-carousel" type="button" data-bs-target="#warwickCorousel" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
@@ -137,6 +170,13 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
+                                    <h5 class="mb-1">Big data analysis</h5>
+                                    <p class="mb-3">Leveraging the MapReduce programming paradigm, in both Hadoop and Hive, I performed analysis on an organisation's massive dataset regarding their sales data. This involved using the HDFS architecture to reliably store the files across machines in a large cluster.</p>
+                                    <p class="mb-3">I implemented various queries in Hive for initial ad hoc analysis and later wrote them in Hadoop for optimized performance, using custom-written combiners and partitioners to achieve substantial speed up, resulting in the Hadoop queries to execute up to 8x faster than the equivalent Hive queries.</p>
+                                    <p class="mb-3">This coursework not only gave me experience with the MapReduce paradigm, but helped me understand the challenges of building distributed, scalable, and fault-tolerant infrastructure for large-scale computing.</p>
+                                    <p>For this coursework, I was awarded a First (90%).</p>
+                                </div>
+                                <div class="carousel-item">
                                     <div class="row">
                                         <div class="col">
                                             <h5 class="mb-1">Enchore (a chore scheduling app)</h5>
@@ -204,10 +244,10 @@
                     <h3 class="mb-1">Multchess<span class="date mt-1">2021</span></h3>
                     <p class="mb-3">Online multiplayer chess web application made with Node.js and Socket.IO. Website: <a href="https://www.multchess.com/" target="_blank" rel="noopener noreferrer">multchess.com</a></p>
                     <div class="inline mx-auto">
-                        <a href="https://www.multchess.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="./projects/multchess/menu.png" class="img-fluid img-thumbnail col-5 d-lg-none" alt="multchess">
-                        <img src="./projects/multchess/game.png" class="img-fluid img-thumbnail col-5 col-lg-12" alt="multchess">
-                        </a>
+                        <div class="link" onclick="window.open('https://multchess.com/')">
+                            <img src="./projects/multchess/menu.png" class="img-fluid img-thumbnail col-5 d-lg-none" alt="multchess">
+                            <img src="./projects/multchess/game.png" class="img-fluid img-thumbnail col-5 col-lg-12" alt="multchess">
+                        </div>
                     </div>
                     <div class="collapse mt-3" id="multchess">
                         <p>I decided to expand upon the skills I obtained from my first year Web Development Technologies module by creating a functional and reliable online application with full duplex and low-latency capabilities. I very much enjoy Chess, and so it seemed a sensible game to implement.</p>
