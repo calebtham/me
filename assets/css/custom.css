@@ -143,23 +143,23 @@ Front cover
 }
 
 #sunsetSun {
-  background-image: url("../img/sunset-sun.jpg");
+  background-image: url("../img/sunset-sun.webp");
 }
 
 #sunsetWater {
-  background-image: url("../img/sunset-water.png");
+  background-image: url("../img/sunset-water.webp");
 }
 
 #sunsetBoat {
-  background-image: url("../img/sunset-boat.png");
+  background-image: url("../img/sunset-boat.webp");
 }
 
 #grindelwaldSky {
-  background-image: url("../img/grindelwald-sky.jpg");
+  background-image: url("../img/grindelwald-sky.webp");
 }
 
 #grindelwaldMountain {
-  background-image: url("../img/grindelwald-mountain.png");
+  background-image: url("../img/grindelwald-mountain.webp");
 }
 
 #lightSwitch {
