@@ -229,6 +229,39 @@
                 </div> 
             </div>
 
+            <!-- LLM Summarisation Chrome Extension -->
+            <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
+                <div class="card">
+                    <h5 class="mb-2">
+                        <span class="badge bg-primary mb-2">Web Dev</span>
+                        <span class="badge bg-primary mb-2">OOP</span>
+                        <span class="badge bg-secondary mb-2">HTML</span>
+                        <span class="badge bg-secondary mb-2">CSS</span>
+                        <span class="badge bg-secondary mb-2">JavaScript</span>
+                        <span class="badge bg-grey mb-2">Node.js</span>
+                        <span class="badge bg-grey mb-2">Socket.IO</span>
+                        <span class="badge bg-grey mb-2">Bootstrap</span>
+                    </h5>
+                    <h3 class="mb-1">LLM Summarisation Chrome Extension<span class="date mt-1">2023</span></h3>
+                    <p class="mb-3">Leveraging Langchain to use GPT LLMs to summarise web articles, triggered by a Chrome extension. View the code on my <a href="https://github.com/calebtham/deJPEG" target="_blank">GitHub repo</a> (Work In Progress).</p>
+                    <div class="inline mx-auto">
+                        <div class="link" onclick="window.open('https://github.com/calebtham/llm-summarisation')">
+                            <video autoplay loop class="img-fluid img-thumbnail col-12" muted>
+                                <source src="./projects/llm-summarisation/llmsummarisation.webm" type="video/webm"> 
+                            </video>
+                        </div>
+                    </div>
+                    <div class="collapse mt-3" id="LLMsummarisation">
+                        <p>To gain some experience with building tools leveraging LLMs, I developed a Chrome extension that performs summarisation of webpage content on the current tab using GPT models – via OpenAI’s API. This was also valuable experience in prompt engineering. I used Langchain to make the API calls and to create pipelines for summarisation. Two key pipelines were a map-reduce approach and LLM self-reflection. </p>
+                        <p>Map-reduce enabled summarisation of long documents by independently summarising parts of the document (in parallel), and then combining the results into a final summary. This was needed since LLMs have a limited token context, so long documents cannot naively be used in the prompt.</p>
+                        <p>Self-reflection involves using the LLM to reflect upon its results. The method used is simply feeding the original document and resulting summary to the LLM and ask it if each bullet point in the summary is in fact true (according to the original document). This helps eliminate hallucination in the final response.</p>
+                    </div>
+                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#LLMsummarisation" role="button" aria-expanded="false" aria-controls="multchess">
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                </div> 
+            </div>
+
             <!-- Multchess -->
             <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
                 <div class="card">
@@ -274,40 +307,16 @@
                     </h5>
                     <h3 class="mb-1">TensorFlow 2 Handwriting OCR<span class="date mt-1">2021</span></h3>
                     <p class="mb-3">Handwriting classifier using a TensorFlow 2 CNN model trained on the EMNIST dataset</p>
-                    <img src="./projects/ocr/architecture.png" class="img-fluid img-thumbnail col-8 col-lg-12" alt="Lockdown Learning website">
+                    <img src="./projects/ocr/architecture.png" class="img-fluid img-thumbnail col-8 col-lg-12" alt="OCR">
                     <div class="collapse mt-3" id="ocr">
                         <p>Having already completed the Machine Learning Course (by Stanford University) on Coursera and written MLPs both from scratch and in TensorFlow.js, I wanted to explore some more complex architectures - namely CNNs. So, I decided to take the "Getting started with TensorFlow 2" course on Coursera.</p>
                         <p>Using the skills obtained on the course, I created a CNN model that classifies alphanumeric characters, trained on the EMINST dataset. To prevent overfitting, I used dropout layers, batch normalization, and regularization - as well as callbacks that (i) saved the best model in training (after an epoch) and (ii) stopped training if validation accuracy had not improved in two epochs. </p>
                         <p class="mb-3">I also wrote my own custom callback that graphed, using Matplotlib, the model's prediction frequency distribution - this was to investigate how the model was learning. For example, it may be predicting 'b' much more often than '6', even though the validation set was balanced. I found that this issue was much less common with a model with regularization, batch normalization and dropout layers. Thus, this callback helped me determine the model architecture and fine-tune the hyperparameters.</p>
-                        <img src="./projects/ocr/frequency.png" class="img-fluid img-thumbnail mb-3" alt="Lockdown Learning website">
+                        <img src="./projects/ocr/frequency.png" class="img-fluid img-thumbnail mb-3" alt="OCR">
                         <p>(This shows a model confusing 'L's with '1' and 'f's with 'F')</p>
                         <p>For the balanced (digits and letters merged) dataset, the model managed a test accuracy of 89.21%, and a test accuracy of 99.52% for the digits dataset.</p>
                     </div>
                     <a class="more text-center mt-3" data-bs-toggle="collapse" href="#ocr" role="button" aria-expanded="false" aria-controls="ocr">
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                </div> 
-            </div>
-
-            <!-- Lockdown Learning -->
-            <div class="col-lg-6 col-md-12 mb-3 p-0 px-md-3 pb-md-3">
-                <div class="card">
-                    <h5 class="mb-2">
-                        <span class="badge bg-primary mb-2">Web Dev</span>
-                        <span class="badge bg-secondary mb-2">HTML</span>
-                        <span class="badge bg-secondary mb-2">CSS</span>
-                        <span class="badge bg-secondary mb-2">JavaScript</span>
-                        <span class="badge bg-grey mb-2">Node.js</span>
-                    </h5>
-                    <h3 class="mb-1">Lockdown Learning<span class="date mt-1">2020 - 2021</span></h3>
-                    <p class="mb-3">Co-founded a tutor advertising organisation, for which I implemented a website. It lists partner tutors and has a search engine for students. Website (last maintained in 2021): <a href="http://www.lock-learn.co.uk/" target="_blank" rel="noopener noreferrer">lock-learn.co.uk</a></p>
-                    <a href="http://www.lock-learn.co.uk/" target="_blank" rel="noopener noreferrer"><img src="./projects/lockdown-learning/website.png" class="img-fluid img-thumbnail " alt="Lockdown Learning website"></a>
-                    <div class="collapse mt-3" id="lockdownlearning">
-                        <p>During the first COVID-19 lockdown, I co-founded an organisation to advertise online GCSE/A-Level tutors. Our goal was to advertise tutors to students through our website and through leaflets sent to schools, so that tutors could find good work and students could continue their education through school closures.</p>
-                        <p>Within two days, I learned essential web technologies, including HTML, CSS, and JavaScript (Node.js), and developed the organisation website. This quick turnaround allowed us to launch quickly at the beginning of the lockdown period - when advertising tutors would be most effective.
-                        <p>We successfully found many students for tutors listed on our website.</p>
-                    </div>
-                    <a class="more text-center mt-3" data-bs-toggle="collapse" href="#lockdownlearning" role="button" aria-expanded="false" aria-controls="lockdownlearning">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div> 
